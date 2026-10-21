@@ -65,7 +65,7 @@ export async function getGoogleData(): Promise<GoogleData> {
       rating: place.rating ?? FALLBACK.rating,
       reviewCount: place.userRatingCount ?? FALLBACK.reviewCount,
       reviews: reviews.length ? reviews : FALLBACK.reviews,
-      profileUrl: place.googleMapsUri ?? FALLBACK.profileUrl,
+      profileUrl: FALLBACK.profileUrl,
       writeReviewUrl: FALLBACK.writeReviewUrl,
     };
   } catch {

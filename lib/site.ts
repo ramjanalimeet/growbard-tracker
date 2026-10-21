@@ -225,7 +225,7 @@ export const GOOGLE = {
   rating: 5.0,
   reviewCount: 2,
   // Share link from Google Maps.
-  profileUrl: "https://maps.app.goo.gl/BKp7yW1DFP5ZJGTK6",
+  profileUrl: "https://maps.app.goo.gl/QUY7hvNQFnnSyr7MA",
   // "Ask for reviews" link: opens the Google review form directly.
   writeReviewUrl: "https://g.page/r/CXKuYzOIcMb6EAE/review",
   mapEmbedUrl:
