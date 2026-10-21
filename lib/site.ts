@@ -226,9 +226,8 @@ export const GOOGLE = {
   reviewCount: 2,
   // Share link from Google Maps.
   profileUrl: "https://maps.app.goo.gl/BKp7yW1DFP5ZJGTK6",
-  // Opens the same profile, where "Write a review" is one tap. Swap in the
-  // profile's "Ask for reviews" link to open the review form directly.
-  writeReviewUrl: "https://maps.app.goo.gl/BKp7yW1DFP5ZJGTK6",
+  // "Ask for reviews" link: opens the Google review form directly.
+  writeReviewUrl: "https://g.page/r/CXKuYzOIcMb6EAE/review",
   mapEmbedUrl:
     "https://www.google.com/maps?output=embed&q=" +
     encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
