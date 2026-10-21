@@ -2,7 +2,7 @@
 // details with the real ones before going live.
 export const SITE = {
   name: "Growbard",
-  tagline: "Digital marketing that grows local businesses",
+  tagline: "The growth partner for local businesses",
   url: "https://growbard.com",
   email: "raakash.meet@gmail.com",
   // Same format as the Google Business Profile, to keep name/address/phone consistent.

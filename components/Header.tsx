@@ -27,7 +27,7 @@ export default function Header() {
             <Image src="/logo.png" alt="" width={42} height={42} priority className="brand__logo" />
             <span className="brand__text">
               <span className="brand__name">{SITE.name}</span>
-              <span className="brand__sub">Digital Marketing Agency</span>
+              <span className="brand__sub">Your Growth Partner</span>
             </span>
           </Link>
 

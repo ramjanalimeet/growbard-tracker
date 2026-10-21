@@ -88,6 +88,10 @@ img {
   max-width: 820px;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .accent {
   color: var(--brand);
 }

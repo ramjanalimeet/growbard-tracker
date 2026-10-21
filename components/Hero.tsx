@@ -42,8 +42,8 @@ export default function Hero() {
           </p>
           <h1>
             Grow Your Business
-            <br /> With Results-Driven
-            <span className="accent"> Digital Marketing</span>
+            <br /> With a <span className="nowrap">Results-Driven</span>
+            <span className="accent"> Growth Partner</span>
           </h1>
           <p className="hero__lead">
             Local SEO, website development, Google Ads and social media marketing that bring

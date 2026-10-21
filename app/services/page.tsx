@@ -19,7 +19,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Digital marketing services that bring customers"
+        title="Your growth partner for more customers"
         lead="Local SEO, website development, Google Ads and social media marketing, planned and managed by one team."
       />
       <ServicesSection />
