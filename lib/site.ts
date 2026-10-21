@@ -224,14 +224,11 @@ export const GOOGLE = {
   businessName: "Growbard - Marketing Agency",
   rating: 5.0,
   reviewCount: 2,
-  // Paste the profile's share link here (Google Maps > Share > Copy link).
-  profileUrl:
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
-  // Paste the "Ask for reviews" link from the profile here.
-  writeReviewUrl:
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
+  // Share link from Google Maps.
+  profileUrl: "https://maps.app.goo.gl/BKp7yW1DFP5ZJGTK6",
+  // Opens the same profile, where "Write a review" is one tap. Swap in the
+  // profile's "Ask for reviews" link to open the review form directly.
+  writeReviewUrl: "https://maps.app.goo.gl/BKp7yW1DFP5ZJGTK6",
   mapEmbedUrl:
     "https://www.google.com/maps?output=embed&q=" +
     encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
