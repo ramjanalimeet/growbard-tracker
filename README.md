@@ -44,3 +44,16 @@ Google Business Profile (settings in `GOOGLE` in `lib/site.ts`).
   and any reviews pasted into `GOOGLE_REVIEWS`.
 - Paste the profile's share link into `GOOGLE.profileUrl` and its "Ask for
   reviews" link into `GOOGLE.writeReviewUrl`.
+
+## Languages (English / বাংলা)
+
+English pages live in `app/(en)`, Bangla pages in `app/(bn)/bn` (each has its own
+root layout so `<html lang>` is correct). `lib/i18n.ts` lists which English pages
+have a Bangla version (`TRANSLATED`); those pairs get hreflang tags, sitemap
+alternates and a direct link in the language switcher. Bangla copy is in `lib/bn.ts`.
+To translate another page, add it under `app/(bn)/bn` and to `TRANSLATED`.
+
+## FAQs
+
+Every page has its own FAQ with FAQPage structured data. Page-level FAQs are in
+`lib/faqs.ts`; service, industry and blog FAQs live with their content.

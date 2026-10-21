@@ -73,6 +73,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I rank higher on Google Maps?",
+        a: "Improve relevance with categories and services, and prominence with reviews, citations and an active profile.",
+      },
+      {
+        q: "Can I pay to be on Google Maps?",
+        a: "You can advertise on Maps with Google Ads, but organic rankings can't be bought.",
+      },
       { q: "Can you guarantee a top 3 position on Google Maps?", a: "No one can guarantee rankings, and Google warns against providers who do. We focus on the factors Google publishes and report progress honestly." },
       { q: "Do I need a shop to appear on Google Maps?", a: "No. Service-area businesses can appear for the areas they serve without showing a public address." },
       { q: "Can I advertise on Google Maps?", a: "Yes, Google Ads can show ads on Maps. They work well alongside organic Map Pack rankings." },
@@ -158,6 +166,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What is a local SEO audit?",
+        a: "A review of your Google profile, reviews, citations, website and competitors to find what's holding back your local rankings.",
+      },
+      {
+        q: "How much does a local SEO audit cost?",
+        a: "We offer a free audit of your Google presence. Send us your profile link on WhatsApp.",
+      },
       { q: "How long does a local SEO audit take?", a: "A focused audit of your profile, website and top competitors usually takes a few working days." },
       { q: "Is a free audit really useful?", a: "Yes. It shows the biggest gaps and quick wins. You can fix many of them yourself even if you don't hire us." },
       { q: "How often should I audit my local SEO?", a: "Every 6–12 months, or whenever your rankings or calls drop noticeably." },
@@ -233,6 +249,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How can a hospital improve its Google ranking?",
+        a: "Create department and doctor pages, optimize each branch's Google profile and collect patient reviews.",
+      },
+      {
+        q: "Is SEO safe for healthcare websites?",
+        a: "Yes, when information is accurate, reviewed by qualified people and free of exaggerated claims.",
+      },
       { q: "Should doctors have their own pages?", a: "Yes. Patients often search for doctors by name or specialty, and individual pages help them find and trust you." },
       { q: "Can we publish prices for tests?", a: "Where possible, yes. Price information answers a common question and helps patients choose you." },
       { q: "Can clinics advertise on Google?", a: "Yes, within Google's healthcare advertising policies. Ads for treatments and tests can work well alongside SEO." },
@@ -309,6 +333,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I send customers a Google review link?",
+        a: "Copy the link from the \"Ask for reviews\" option in your Google Business Profile and share it on WhatsApp or SMS.",
+      },
+      {
+        q: "Is it okay to offer a discount for a Google review?",
+        a: "No. Offering incentives for reviews goes against Google's policies.",
+      },
       { q: "Can I ask every customer for a review?", a: "Yes. Asking all customers is fine and encouraged. Only asking happy customers through filtering tools is not allowed." },
       { q: "Can I delete bad reviews?", a: "You can't delete them yourself. You can report reviews that break Google's policies, and reply professionally to the rest." },
       { q: "How many reviews do I need?", a: "Aim to match or beat the top three businesses in your area, and keep getting new ones every month." },
@@ -387,6 +419,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I manage Google profiles for multiple branches?",
+        a: "Create one verified profile per branch and manage them together in a Business Profile group.",
+      },
+      {
+        q: "Should each branch have its own page?",
+        a: "Yes. A unique page per branch helps it rank in its own area.",
+      },
       { q: "Can I have one Google profile for all branches?", a: "No. Each branch with its own address and staff should have its own verified profile." },
       { q: "Do I need a separate website for each branch?", a: "No. One website with a strong page for each branch is usually best." },
       { q: "How do I manage reviews across branches?", a: "Give each branch its own review link and make one person responsible for replies at each location." },
@@ -469,6 +509,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What makes a good landing page?",
+        a: "A headline matching the ad, a clear offer, proof, fast loading and one obvious action.",
+      },
+      {
+        q: "What is the difference between a website and a landing page?",
+        a: "A website covers your whole business; a landing page focuses on one offer and one action.",
+      },
       { q: "How many landing pages do I need?", a: "Usually one per main service or campaign, so each ad sends visitors to a page that matches it." },
       { q: "Can a landing page rank on Google?", a: "It can, but most landing pages are built for ads. Service pages on your main website are better for organic rankings." },
       { q: "Should a landing page have a menu?", a: "Keep navigation minimal so visitors focus on the one action you want them to take." },
@@ -550,6 +598,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How often should a website be redesigned?",
+        a: "Usually every few years, or whenever it becomes slow, outdated or stops bringing leads.",
+      },
+      {
+        q: "Will I lose SEO if I redesign my website?",
+        a: "Not if URLs are redirected and important content is kept.",
+      },
       { q: "Will a redesign hurt my Google rankings?", a: "Not if it's done carefully with redirects and preserved content. Rankings can even improve thanks to better speed and structure." },
       { q: "How long does a redesign take?", a: "Usually 3–6 weeks for a typical business website, longer for large or e-commerce sites." },
       { q: "Can you keep my domain and emails?", a: "Yes. Redesigning the website doesn't affect your domain name or email accounts." },
@@ -619,6 +675,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What happens if I don't maintain my website?",
+        a: "It can become slow, insecure or broken, and forms may stop working without anyone noticing.",
+      },
+      {
+        q: "How much does website maintenance cost?",
+        a: "It depends on the site and tasks. Maintenance is included in our Growth and Dominate plans.",
+      },
       { q: "Can you maintain a website you didn't build?", a: "Usually yes. We review the site first and let you know if anything needs fixing before ongoing maintenance." },
       { q: "Is hosting included in maintenance?", a: "It depends on the plan. We'll explain hosting options and costs clearly when we review your site." },
       { q: "How quickly are content changes made?", a: "Small text and image updates are typically done within one to two working days." },
@@ -691,6 +755,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What makes a website SEO-friendly?",
+        a: "Clear structure, unique titles, fast mobile loading, structured data, a sitemap and internal links.",
+      },
+      {
+        q: "Can I make my existing website SEO-friendly?",
+        a: "Usually yes, with technical fixes and new service pages; very old sites may be better rebuilt.",
+      },
       { q: "Does an SEO-friendly website rank automatically?", a: "No. It removes technical barriers, but you still need good content, reviews and links to rank for competitive searches." },
       { q: "Is WordPress SEO-friendly?", a: "It can be, with the right theme, setup and maintenance. Any platform can be SEO-friendly or not depending on how it's built." },
       { q: "What is structured data?", a: "Code that describes your business, FAQs and pages to Google in a standard format, which can enable richer search results." },
@@ -774,6 +846,14 @@ export const LOCAL_WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How fast should a website load?",
+        a: "Aim for Google's good thresholds: main content within 2.5 seconds on mobile.",
+      },
+      {
+        q: "How do I check my website speed?",
+        a: "Use Google's free PageSpeed Insights tool and test the mobile results.",
+      },
       { q: "Does speed affect Google rankings?", a: "Page experience, including Core Web Vitals, is one of many signals Google uses. Speed also strongly affects how many visitors become leads." },
       { q: "Why is my site fast on Wi-Fi but slow on mobile?", a: "Mobile connections and phones are slower, so heavy pages suffer more. Always test on mobile." },
       { q: "Can any website be made fast?", a: "Most can be improved significantly. Some very heavy sites are better rebuilt." },

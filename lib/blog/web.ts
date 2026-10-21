@@ -104,6 +104,14 @@ export const WEB_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "Why do website prices vary so much in Bangladesh?",
+        a: "Prices depend on design, number of pages, features, SEO work and whether maintenance is included.",
+      },
+      {
+        q: "Is a cheap website worth it?",
+        a: "A cheap site can work for a start, but slow, unmaintained sites often cost more later in lost leads and rebuilds.",
+      },
+      {
         q: "How much does a basic website cost in Bangladesh?",
         a: "A basic template website can cost a few thousand to a few tens of thousands of taka. Lead-generation and e-commerce sites cost more because they include more pages, features and SEO work.",
       },
@@ -212,6 +220,14 @@ export const WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What should I look for in a web design company?",
+        a: "Live examples, mobile speed, SEO setup, your ownership of the domain and clear support after launch.",
+      },
+      {
+        q: "How do I know if a website is good?",
+        a: "It loads fast on mobile, explains what you do quickly and makes it easy to call or message you.",
+      },
       {
         q: "Should I hire a freelancer or a company?",
         a: "Freelancers can be cheaper for small sites. A company is usually better if you need design, development, SEO and ongoing support handled reliably by a team.",
@@ -327,6 +343,14 @@ export const WEB_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "How much does an e-commerce website cost in Bangladesh?",
+        a: "It depends on products, payment integrations and custom features; costs range widely from simple stores to custom platforms.",
+      },
+      {
+        q: "Which payment gateways work in Bangladesh?",
+        a: "bKash, Nagad, card payments and cash on delivery can all be integrated through payment gateways.",
+      },
+      {
         q: "Can I accept bKash on my website?",
         a: "Yes. bKash, Nagad, card payments and cash on delivery can all be integrated into an e-commerce website through a payment gateway.",
       },
@@ -428,6 +452,14 @@ export const WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What should a B2B website include?",
+        a: "Products, capacity, certifications, factory photos, company details and an RFQ form.",
+      },
+      {
+        q: "How do buyers find manufacturers online?",
+        a: "Through Google searches, B2B platforms, LinkedIn and referrals, so a credible website matters at every step.",
+      },
       {
         q: "Should an exporter website have prices?",
         a: "Usually not. B2B prices depend on quantity and specifications, so a clear RFQ form works better than fixed prices.",
@@ -540,6 +572,14 @@ export const WEB_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What is the fastest way to get leads?",
+        a: "Google Ads and click-to-WhatsApp ads can bring leads within days.",
+      },
+      {
+        q: "How do I generate leads without ads?",
+        a: "Optimize your Google profile, collect reviews, ask for referrals and publish helpful content.",
+      },
       {
         q: "What's the cheapest way to get leads?",
         a: "A well-optimized Google Business Profile with strong reviews is free and often brings the best-quality leads for local businesses.",

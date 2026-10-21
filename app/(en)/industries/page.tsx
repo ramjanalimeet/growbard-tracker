@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { CtaBand, PageHero, ProcessSection } from "@/components/Sections";
+import { CtaBand, FaqSection, PageHero, ProcessSection } from "@/components/Sections";
+import { INDUSTRIES_FAQS } from "@/lib/faqs";
 import { INDUSTRIES } from "@/lib/industries";
 import { pageMetadata } from "@/lib/seo";
 
@@ -39,6 +40,7 @@ export default function IndustriesPage() {
         </div>
       </section>
       <ProcessSection />
+      <FaqSection items={INDUSTRIES_FAQS} title="Questions about industries we serve" />
       <CtaBand />
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PostCard from "@/components/PostCard";
-import { CtaBand, PageHero } from "@/components/Sections";
+import { CtaBand, FaqSection, PageHero } from "@/components/Sections";
+import { BLOG_FAQS } from "@/lib/faqs";
 import { POST_CATEGORIES, POSTS } from "@/lib/posts";
 import { pageMetadata } from "@/lib/seo";
 
@@ -45,6 +46,7 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
+      <FaqSection items={BLOG_FAQS} title="About the Growbard blog" />
       <CtaBand />
     </>
   );

@@ -44,6 +44,14 @@ export const INDUSTRIES: Industry[] = [
     searches: ["flat for sale in Dhaka", "apartment in Uttara", "land for sale near me", "ready flat Bashundhara"],
     faqs: [
       {
+        q: "How do real estate companies get leads online?",
+        a: "Through project websites, Google Ads for area-based searches, Facebook video and lead ads, and a strong Google Business Profile, with fast WhatsApp follow-up.",
+      },
+      {
+        q: "Do Facebook ads work for real estate?",
+        a: "Yes, especially video walkthroughs and lead ads targeted by area and at non-resident Bangladeshi buyers.",
+      },
+      {
         q: "Can you target Bangladeshis living abroad?",
         a: "Yes. Google Ads and Meta ads can target buyers in the UK, Middle East and elsewhere, and we build landing pages with WhatsApp contact so they can reach you easily.",
       },
@@ -79,6 +87,14 @@ export const INDUSTRIES: Industry[] = [
     },
     searches: ["dentist near me", "dental clinic in Dhanmondi", "teeth whitening cost", "root canal treatment"],
     faqs: [
+      {
+        q: "How do dentists get more patients?",
+        a: "By ranking on Google Maps for \"dentist near me\" searches, building patient reviews, and promoting high-value treatments with Google Ads.",
+      },
+      {
+        q: "Should a dental clinic run Google Ads?",
+        a: "Yes, for high-value treatments such as implants and braces, targeted at people near the clinic.",
+      },
       {
         q: "How do we get more Google reviews from patients?",
         a: "We set up a simple process: a short review link sent on WhatsApp after each visit. It's the most effective way to grow reviews steadily.",
@@ -116,6 +132,14 @@ export const INDUSTRIES: Industry[] = [
     searches: ["interior designer near me", "office interior design Dhaka", "flat interior design cost", "kitchen cabinet design"],
     faqs: [
       {
+        q: "How do interior designers find clients?",
+        a: "Through a portfolio website, Instagram and Facebook content, Google Maps visibility and referrals backed by reviews.",
+      },
+      {
+        q: "Is Instagram good for interior designers?",
+        a: "Yes. Before-and-after reels and project carousels are among the best ways to show your style and attract clients.",
+      },
+      {
         q: "Which platform works best for interior designers?",
         a: "Instagram and Facebook for inspiration and reach, and Google for people ready to hire. Most firms get the best results using both.",
       },
@@ -151,6 +175,14 @@ export const INDUSTRIES: Industry[] = [
     },
     searches: ["solar panel price in Bangladesh", "rooftop solar for factory", "solar installation company", "on-grid solar system"],
     faqs: [
+      {
+        q: "How do solar companies get customers?",
+        a: "With clear websites that explain savings, Google Ads for solar searches, case studies and separate campaigns for homes, businesses and factories.",
+      },
+      {
+        q: "What should a solar company website include?",
+        a: "System packages, cost and savings explanations, completed projects, warranties and a quote form asking for bill amount and roof size.",
+      },
       {
         q: "Can you help us reach factories and commercial clients?",
         a: "Yes. We build dedicated pages and campaigns for rooftop and industrial solar, targeting decision-makers searching for commercial installations.",
@@ -188,6 +220,14 @@ export const INDUSTRIES: Industry[] = [
     searches: ["study in UK from Bangladesh", "study abroad consultancy Dhaka", "Canada student visa", "IELTS requirement Australia"],
     faqs: [
       {
+        q: "How do study-abroad consultancies get more students?",
+        a: "With country pages that rank on Google, intake-timed ads, seminar promotion, student success stories and fast follow-up.",
+      },
+      {
+        q: "Which social media is best for study-abroad agencies?",
+        a: "Facebook for reach and lead ads, Instagram and YouTube for student stories, and WhatsApp for follow-up.",
+      },
+      {
         q: "Can you promote our seminars and education fairs?",
         a: "Yes. We run event campaigns on Facebook and Google with registration forms and WhatsApp reminders to boost turnout.",
       },
@@ -223,6 +263,14 @@ export const INDUSTRIES: Industry[] = [
     },
     searches: ["buy online Bangladesh", "best price [product] BD", "online shop near me", "home delivery Dhaka"],
     faqs: [
+      {
+        q: "How can I increase sales on my online store?",
+        a: "Improve product pages and checkout, run Google and Meta ads to high-intent audiences, and retarget visitors who didn't buy.",
+      },
+      {
+        q: "Is SEO important for e-commerce?",
+        a: "Yes. Category and product pages that rank on Google bring free, high-intent traffic and reduce dependence on ads.",
+      },
       {
         q: "We only sell through Facebook. Do we need a website?",
         a: "A website gives you sales you own, works with Google Ads and SEO, and makes your brand look more trustworthy, so it's worth having alongside your page.",
@@ -260,6 +308,14 @@ export const INDUSTRIES: Industry[] = [
     searches: ["car detailing near me", "ceramic coating price Dhaka", "car wash Gulshan", "car interior cleaning"],
     faqs: [
       {
+        q: "How do car detailing businesses get more customers?",
+        a: "A Google Business Profile full of photos and reviews, transformation videos on social media and local ads for premium services.",
+      },
+      {
+        q: "Should a car detailing business be on Google Maps?",
+        a: "Yes. Most people search \"car detailing near me\" and choose from the businesses shown on the map.",
+      },
+      {
         q: "What works best for a detailing business?",
         a: "A strong Google Business Profile with lots of photos and reviews, plus short videos on Facebook and Instagram. Together they bring a steady flow of bookings.",
       },
@@ -295,6 +351,14 @@ export const INDUSTRIES: Industry[] = [
     },
     searches: ["garment manufacturer Bangladesh", "leather goods exporter", "jute products supplier", "OEM factory Bangladesh"],
     faqs: [
+      {
+        q: "How do Bangladeshi exporters find international buyers?",
+        a: "Through a professional B2B website, Google Ads targeted at export markets, LinkedIn, trade fairs and sourcing platforms.",
+      },
+      {
+        q: "Does a manufacturer need a website?",
+        a: "Yes. International buyers check your website before sending an RFQ, so it's often the first test of credibility.",
+      },
       {
         q: "Can you reach buyers outside Bangladesh?",
         a: "Yes. We target Google Ads and SEO at your export markets and build pages in the language and format international buyers expect.",

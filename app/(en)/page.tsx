@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import { HOME_FAQS } from "@/lib/faqs";
 import {
   ContactSection,
   CtaBand,
@@ -49,7 +50,7 @@ export default function Home() {
       <PricingSection more />
       <ReviewsSection more />
       <CtaBand />
-      <FaqSection />
+      <FaqSection items={HOME_FAQS} />
       <ContactSection />
     </>
   );

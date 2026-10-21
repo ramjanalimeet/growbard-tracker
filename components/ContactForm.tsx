@@ -2,11 +2,40 @@
 
 import { useState } from "react";
 import Icon from "@/components/Icon";
+import type { Lang } from "@/lib/i18n";
 import { SERVICES, SITE } from "@/lib/site";
+
+const TEXT = {
+  en: {
+    name: "Your name",
+    business: "Business name",
+    email: "Email",
+    phone: "Phone / WhatsApp",
+    service: "Service you need",
+    notSure: "Not sure yet",
+    goals: "Tell us about your goals",
+    send: "Send via WhatsApp",
+    note: "Your details open in WhatsApp, ready to send to us. Prefer email?",
+    thanks: "Thanks! WhatsApp should open now. Tap Send to deliver your message. If it didn't open, message us on WhatsApp at",
+  },
+  bn: {
+    name: "আপনার নাম",
+    business: "ব্যবসার নাম",
+    email: "ইমেইল",
+    phone: "ফোন / হোয়াটসঅ্যাপ",
+    service: "কোন সার্ভিস দরকার",
+    notSure: "এখনো নিশ্চিত নই",
+    goals: "আপনার লক্ষ্য সম্পর্কে লিখুন",
+    send: "হোয়াটসঅ্যাপে পাঠান",
+    note: "আপনার তথ্য হোয়াটসঅ্যাপে খুলবে, শুধু পাঠিয়ে দিন। ইমেইল করতে চান?",
+    thanks: "ধন্যবাদ! এখন হোয়াটসঅ্যাপ খুলবে। মেসেজটি পাঠাতে Send চাপুন। না খুললে হোয়াটসঅ্যাপে মেসেজ দিন:",
+  },
+};
 
 // Sends the enquiry to Growbard's WhatsApp: the form opens WhatsApp with the
 // details already typed out, and the visitor taps Send.
-export default function ContactForm() {
+export default function ContactForm({ lang = "en" }: { lang?: Lang }) {
+  const t = TEXT[lang];
   const [sent, setSent] = useState(false);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -37,48 +66,47 @@ export default function ContactForm() {
     <form className="form" onSubmit={onSubmit}>
       <div className="form__row">
         <label>
-          Your name
+          {t.name}
           <input name="name" required autoComplete="name" />
         </label>
         <label>
-          Business name
+          {t.business}
           <input name="business" autoComplete="organization" />
         </label>
       </div>
       <div className="form__row">
         <label>
-          Email
+          {t.email}
           <input name="email" type="email" autoComplete="email" />
         </label>
         <label>
-          Phone / WhatsApp
+          {t.phone}
           <input name="phone" type="tel" required autoComplete="tel" />
         </label>
       </div>
       <label>
-        Service you need
+        {t.service}
         <select name="service" defaultValue={SERVICES[0].title}>
           {SERVICES.map((s) => (
             <option key={s.id}>{s.title}</option>
           ))}
-          <option>Not sure yet</option>
+          <option>{t.notSure}</option>
         </select>
       </label>
       <label>
-        Tell us about your goals
+        {t.goals}
         <textarea name="message" rows={4} />
       </label>
       <button type="submit" className="btn btn--whatsapp btn--block">
-        <Icon name="whatsapp" size={20} /> Send via WhatsApp
+        <Icon name="whatsapp" size={20} /> {t.send}
       </button>
       <p className="form__or">
-        Your details open in WhatsApp, ready to send to us. Prefer email?{" "}
+        {t.note}{" "}
         <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
       </p>
       {sent && (
         <p className="form__note" role="status">
-          Thanks! WhatsApp should open now. Tap <strong>Send</strong> to deliver your message.
-          If it didn&apos;t open, message us on WhatsApp at{" "}
+          {t.thanks}{" "}
           <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
             {SITE.whatsapp}
           </a>

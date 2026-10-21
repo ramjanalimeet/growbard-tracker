@@ -1,11 +1,12 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
-import { GoogleSummary, ReviewCard } from "@/components/GoogleReviews";
+import { GoogleLogo, GoogleSummary, ReviewCard, Stars } from "@/components/GoogleReviews";
 import Icon from "@/components/Icon";
 import JsonLd from "@/components/JsonLd";
 import { getGoogleData } from "@/lib/google";
 import { INDUSTRIES } from "@/lib/industries";
 import { LOCATIONS } from "@/lib/locations";
+import type { Lang } from "@/lib/i18n";
 import { breadcrumbLd, faqLd, type Crumb } from "@/lib/seo";
 import {
   FAQS,
@@ -24,21 +25,23 @@ export function PageHero({
   title,
   lead,
   crumbs = [{ label: eyebrow }],
+  home = { label: "Home", href: "/" },
 }: {
   eyebrow: string;
   title: string;
   lead: string;
   // Trail after "Home"; the last item is the current page.
   crumbs?: Crumb[];
+  home?: Crumb;
 }) {
   return (
     <section className="page-hero">
-      <JsonLd data={breadcrumbLd(crumbs)} />
+      <JsonLd data={breadcrumbLd(crumbs, home)} />
       <div className="hero__blob hero__blob--left" aria-hidden="true" />
       <div className="hero__dots hero__dots--right" aria-hidden="true" />
       <div className="container page-hero__inner">
         <nav className="crumbs" aria-label="Breadcrumb">
-          <Link href="/">Home</Link>
+          <Link href={home.href ?? "/"}>{home.label}</Link>
           {crumbs.map((c, i) => (
             <span key={c.label} className="crumbs__item">
               <span aria-hidden="true">/</span>
@@ -318,18 +321,39 @@ export async function ReviewsSection({ more = false }: { more?: boolean }) {
       <div className="container">
         <SectionHead
           eyebrow="Google Reviews"
-          title="Rated 5.0 by our clients on Google"
-          lead="Straight from our Google Business Profile."
+          title={`Rated ${google.rating.toFixed(1)} by our clients on Google`}
+          lead="Straight from our Google Business Profile on Google Maps."
         />
-        <div className={`g-reviews${google.reviews.length ? "" : " g-reviews--solo"}`}>
+        <div className="g-cards">
           <GoogleSummary data={google} />
-          {google.reviews.length > 0 && (
-            <div className="g-reviews__list">
-              {google.reviews.map((r) => (
-                <ReviewCard key={r.author + r.text} review={r} fallbackUrl={google.profileUrl} />
-              ))}
-            </div>
+          {google.reviews.map((r) => (
+            <ReviewCard key={r.author + r.text} review={r} fallbackUrl={google.profileUrl} />
+          ))}
+          <div className="card g-map-card">
+            <iframe
+              src={GOOGLE.mapEmbedUrl}
+              title={`${GOOGLE.businessName} on Google Maps`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <a href={google.profileUrl} className="g-map-card__link" target="_blank" rel="noopener noreferrer">
+              <GoogleLogo size={18} /> Open our profile on Google Maps →
+            </a>
+          </div>
+          {google.reviews.length === 0 && (
+            <a href={google.profileUrl} className="card g-cta-card" target="_blank" rel="noopener noreferrer">
+              <GoogleLogo size={30} />
+              <strong>Read our {google.reviewCount} five-star reviews</strong>
+              <span>See what clients say about Growbard on Google Maps.</span>
+              <span className="g-review__more">Read reviews on Google →</span>
+            </a>
           )}
+          <a href={google.writeReviewUrl} className="card g-cta-card g-cta-card--write" target="_blank" rel="noopener noreferrer">
+            <Stars rating={5} size={22} />
+            <strong>Worked with us?</strong>
+            <span>Share your experience. It helps other businesses find a partner they can trust.</span>
+            <span className="btn btn--primary">Write a review</span>
+          </a>
         </div>
         {more && <MoreLink href="/reviews">Read all reviews</MoreLink>}
       </div>
@@ -366,20 +390,40 @@ export function MapSection() {
   );
 }
 
-export function CtaBand() {
+const CTA_TEXT = {
+  en: {
+    title: "Ready to grow your business?",
+    text: "Get a free audit of your Google presence, website and ads, with no strings attached.",
+    audit: "Get My Free Audit",
+    auditHref: "/contact",
+    call: "Call Us",
+    chat: "Chat on WhatsApp",
+  },
+  bn: {
+    title: "আপনার ব্যবসা বাড়াতে প্রস্তুত?",
+    text: "আপনার গুগল প্রোফাইল, ওয়েবসাইট ও অ্যাডসের ফ্রি অডিট নিন, কোনো বাধ্যবাধকতা ছাড়াই।",
+    audit: "ফ্রি অডিট নিন",
+    auditHref: "/bn/contact",
+    call: "কল করুন",
+    chat: "হোয়াটসঅ্যাপে চ্যাট করুন",
+  },
+};
+
+export function CtaBand({ lang = "en" }: { lang?: Lang }) {
+  const t = CTA_TEXT[lang];
   return (
     <section className="cta-band">
       <div className="container cta-band__inner">
         <div>
-          <h2>Ready to grow your business?</h2>
-          <p>Get a free audit of your Google presence, website and ads, with no strings attached.</p>
+          <h2>{t.title}</h2>
+          <p>{t.text}</p>
         </div>
         <div className="cta-band__actions">
-          <Link href="/contact" className="btn btn--light btn--lg">
-            Get My Free Audit
+          <Link href={t.auditHref} className="btn btn--light btn--lg">
+            {t.audit}
           </Link>
           <a href={SITE.phoneHref} className="btn btn--outline-light btn--lg">
-            <Icon name="phone" size={18} /> Call Us
+            <Icon name="phone" size={18} /> {t.call}
           </a>
           <a
             href={SITE.whatsappHref}
@@ -387,7 +431,7 @@ export function CtaBand() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="whatsapp" size={20} /> Chat on WhatsApp
+            <Icon name="whatsapp" size={20} /> {t.chat}
           </a>
         </div>
       </div>
@@ -398,15 +442,17 @@ export function CtaBand() {
 export function FaqSection({
   items = FAQS,
   title = "Questions? We've got answers",
+  eyebrow = "FAQ",
 }: {
   items?: { q: string; a: string }[];
   title?: string;
+  eyebrow?: string;
 }) {
   return (
     <section className="section">
       <JsonLd data={faqLd(items)} />
       <div className="container container--narrow">
-        <SectionHead eyebrow="FAQ" title={title} />
+        <SectionHead eyebrow={eyebrow} title={title} />
         <div className="faq">
           {items.map((f, i) => (
             <details key={f.q} className="faq__item" open={i === 0}>

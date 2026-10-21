@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CONTACT_FAQS } from "@/lib/faqs";
 import { pageMetadata } from "@/lib/seo";
 import { ContactSection, FaqSection, MapSection, PageHero } from "@/components/Sections";
 
@@ -19,7 +20,7 @@ export default function ContactPage() {
       />
       <ContactSection />
       <MapSection />
-      <FaqSection />
+      <FaqSection items={CONTACT_FAQS} title="Contact questions" />
     </>
   );
 }

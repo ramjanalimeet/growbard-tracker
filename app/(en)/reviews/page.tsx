@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import { CtaBand, PageHero, ReviewsSection, StatsSection } from "@/components/Sections";
+import { CtaBand, FaqSection, PageHero, ReviewsSection, StatsSection } from "@/components/Sections";
+import { REVIEWS_FAQS } from "@/lib/faqs";
 
 export const metadata: Metadata = pageMetadata({
   title: "Google Reviews from Our Clients",
@@ -19,6 +20,7 @@ export default function ReviewsPage() {
       />
       <ReviewsSection />
       <StatsSection />
+      <FaqSection items={REVIEWS_FAQS} title="Questions about our reviews" />
       <CtaBand />
     </>
   );

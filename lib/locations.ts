@@ -87,6 +87,9 @@ export const LOCATIONS: Location[] = [
   { slug: "bhola", name: "Bhola", division: "Barishal", note: "Bhola is the country's largest island, with gas fields and a growing local economy." },
 ];
 
+// Anchor id for a division's section on the /locations page.
+export const divisionId = (division: string) => `${division.toLowerCase()}-division`;
+
 export function getLocation(slug: string) {
   return LOCATIONS.find((l) => l.slug === slug);
 }

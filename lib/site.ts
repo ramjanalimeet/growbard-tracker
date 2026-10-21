@@ -4,7 +4,7 @@ export const SITE = {
   name: "Growbard",
   tagline: "The growth partner for local businesses",
   url: "https://growbard.com",
-  email: "raakash.meet@gmail.com",
+  email: "growbard.digital@gmail.com",
   // Same format as the Google Business Profile, to keep name/address/phone consistent.
   phone: "01839-295114",
   phoneHref: "tel:+8801839295114",
@@ -29,8 +29,8 @@ export const SITE = {
 export const NAV = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Locations", href: "/locations" },
   { label: "Industries", href: "/industries" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
@@ -74,6 +74,14 @@ export const SERVICES: Service[] = [
     plans: ["Starter", "Growth", "Dominate"],
     faqs: [
       {
+        q: "What is the difference between local SEO and regular SEO?",
+        a: "Local SEO targets customers in specific areas through Google Maps and location-based searches. Regular SEO targets searches without a local focus, often across a whole country.",
+      },
+      {
+        q: "How do I get my business on Google Maps?",
+        a: "Create and verify a free Google Business Profile, choose the right category, add your details and photos, then build reviews. Our Local SEO service handles all of it.",
+      },
+      {
         q: "What is Local SEO?",
         a: "Local SEO is the work that helps your business appear in Google Maps and local search results when people nearby search for what you offer. It covers your Google Business Profile, reviews, citations and location-focused website pages.",
       },
@@ -103,6 +111,14 @@ export const SERVICES: Service[] = [
     ],
     plans: ["Growth", "Dominate"],
     faqs: [
+      {
+        q: "How much does a website cost in Bangladesh?",
+        a: "It depends on pages and features. Website development and maintenance are included in our Growth plan at ৳24,500/month, together with Local SEO and Google Ads.",
+      },
+      {
+        q: "How long does it take to build a website?",
+        a: "A typical business website takes 3–6 weeks, depending on the number of pages and how quickly content is ready.",
+      },
       {
         q: "Is website maintenance included?",
         a: "Yes. Growth and Dominate plans include website development and ongoing maintenance: updates, backups, security and small content changes.",
@@ -134,6 +150,14 @@ export const SERVICES: Service[] = [
     plans: ["Growth", "Dominate"],
     faqs: [
       {
+        q: "How much should I spend on Google Ads?",
+        a: "Start with a daily budget you can test for a month, track your cost per lead, then increase spend on what works. The ad budget is paid directly to Google.",
+      },
+      {
+        q: "Can Google Ads work for a small local business?",
+        a: "Yes. Targeting only your service area and high-intent searches keeps budgets small and leads relevant.",
+      },
+      {
         q: "Is the ad budget included in the price?",
         a: "No. Our fee covers setting up and managing your campaigns. You pay your ad budget directly to Google and stay in full control of it.",
       },
@@ -163,6 +187,14 @@ export const SERVICES: Service[] = [
     ],
     plans: ["Dominate"],
     faqs: [
+      {
+        q: "Is Facebook marketing still effective in Bangladesh?",
+        a: "Yes. Facebook still has one of the largest audiences in Bangladesh and works well for messages, leads and local awareness.",
+      },
+      {
+        q: "How often should a business post on social media?",
+        a: "Three to four quality posts a week on your main platform is a good, sustainable starting point.",
+      },
       {
         q: "Which platforms do you manage?",
         a: "Mainly Facebook and Instagram, where most local customers in Bangladesh spend their time. We can add LinkedIn for B2B businesses.",
@@ -356,6 +388,14 @@ export const PRICING_COMPARE: { feature: string; plans: [boolean, boolean, boole
 ];
 
 export const PRICING_FAQS = [
+  {
+    q: "Is SEO a one-time cost?",
+    a: "No. SEO is ongoing work: competitors keep improving, and Google keeps changing. A one-time setup helps, but monthly work is what keeps you ranking.",
+  },
+  {
+    q: "Why do digital marketing prices vary so much?",
+    a: "Prices depend on what's actually included: how much work is done each month, whether a website and ad management are included, and how results are tracked. Compare the details, not just the price.",
+  },
   {
     q: "Are the prices monthly?",
     a: "Yes. All plans are billed monthly in Bangladeshi Taka.",

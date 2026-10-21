@@ -89,6 +89,14 @@ export const INDUSTRY_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "What is the best platform for property marketing?",
+        a: "Google captures active buyers, Facebook and YouTube build interest, and your website converts both.",
+      },
+      {
+        q: "How do I market to non-resident Bangladeshis?",
+        a: "Target ads by country, use English pages with WhatsApp contact and offer virtual tours.",
+      },
+      {
         q: "What is the best marketing channel for real estate in Bangladesh?",
         a: "Google (search and Maps) captures active buyers, while Facebook and Instagram build awareness and reach overseas buyers. Most developers get the best results combining both with a strong website.",
       },
@@ -191,6 +199,14 @@ export const INDUSTRY_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "What is the best marketing for a new dental clinic?",
+        a: "A complete Google Business Profile, early patient reviews and local Google Ads for main treatments.",
+      },
+      {
+        q: "How do I get more Google reviews for my clinic?",
+        a: "Send a short WhatsApp message with your review link after each visit and reply to every review.",
+      },
+      {
         q: "How can a new dental clinic get patients quickly?",
         a: "Set up a complete Google Business Profile, run local Google Ads for your main treatments and ask early patients for reviews.",
       },
@@ -276,6 +292,14 @@ export const INDUSTRY_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I get interior design clients online?",
+        a: "Show complete projects on your website and Instagram, rank on Google Maps and run targeted ads.",
+      },
+      {
+        q: "Should interior designers show prices?",
+        a: "Sharing starting prices or typical budgets helps filter enquiries and saves time.",
+      },
       {
         q: "Is Instagram or Google better for interior designers?",
         a: "Instagram builds interest and showcases your style; Google brings clients ready to hire. Using both works best.",
@@ -374,6 +398,14 @@ export const INDUSTRY_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "How do I generate solar leads?",
+        a: "Google Ads for solar searches, landing pages per audience, and case studies with real savings.",
+      },
+      {
+        q: "Who buys solar in Bangladesh?",
+        a: "Homeowners, businesses and factories, each with different needs and decision processes.",
+      },
+      {
         q: "How can a solar company reach factory owners?",
         a: "Create dedicated industrial solar pages, run Google Ads for commercial and rooftop searches, and share case studies on LinkedIn.",
       },
@@ -465,6 +497,14 @@ export const INDUSTRY_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I get students for my consultancy?",
+        a: "Country pages, intake-timed campaigns, seminars and quick follow-up with every lead.",
+      },
+      {
+        q: "Are Facebook lead ads good for study-abroad?",
+        a: "Yes, with qualifying questions such as preferred country and IELTS score to improve quality.",
+      },
       {
         q: "Which countries should I create pages for?",
         a: "Start with the destinations that bring you the most students, then add others as you grow. Each page should be detailed and up to date.",

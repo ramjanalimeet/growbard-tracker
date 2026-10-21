@@ -82,6 +82,14 @@ export const ADS_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "Is it worth hiring a Google Ads agency?",
+        a: "Often yes, because good management lowers cost per lead and saves time, especially when tracking and landing pages are included.",
+      },
+      {
+        q: "How much do Google Ads agencies charge?",
+        a: "Fees vary by scope. At Growbard, Google Ads management is included in the Growth plan at ৳24,500/month.",
+      },
+      {
         q: "Is the ad budget included in the agency fee?",
         a: "Usually not. At Growbard, our fee covers management and you pay your ad budget directly to Google, so you stay in control.",
       },
@@ -186,6 +194,14 @@ export const ADS_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What is a good cost per click in Bangladesh?",
+        a: "It varies by industry and area. What matters most is cost per lead and per customer.",
+      },
+      {
+        q: "Can I run Google Ads with a small budget?",
+        a: "Yes. Start focused on one service and area, then scale what works.",
+      },
       {
         q: "What is the minimum budget for Google Ads in Bangladesh?",
         a: "Google has no strict minimum. Many local businesses start with a modest daily budget for a month, measure cost per lead, then scale up what works.",
@@ -294,6 +310,14 @@ export const ADS_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "What does a social media agency do?",
+        a: "Plans and creates content, manages posting and replies, runs ads and reports on results.",
+      },
+      {
+        q: "How do I measure social media results?",
+        a: "Track messages, leads, website visits and sales, not only likes and followers.",
+      },
+      {
         q: "How many posts per week do I need?",
         a: "Three good posts a week, every week, usually beats daily posting that stops after a month. Consistency matters most.",
       },
@@ -385,6 +409,14 @@ export const ADS_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What is the best Facebook ad objective for leads?",
+        a: "Messages (including WhatsApp) or Leads objectives usually work best for local services.",
+      },
+      {
+        q: "How long should I run a Facebook ad?",
+        a: "Give each ad at least a week before judging, then keep the ones with the lowest cost per lead.",
+      },
       {
         q: "Is boosting a post the same as running ads?",
         a: "Boosting is a simplified ad. It's fine for reach, but Ads Manager gives you better objectives, targeting and tracking for leads.",
@@ -493,6 +525,14 @@ export const ADS_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What should a digital marketing agency report?",
+        a: "Leads, calls, messages, cost per lead, rankings and the work done that month.",
+      },
+      {
+        q: "Should I sign a long-term marketing contract?",
+        a: "Not at first. Month-to-month plans let you judge results before committing.",
+      },
       {
         q: "How much does a digital marketing agency cost in Bangladesh?",
         a: "It depends on the services. Growbard's plans range from ৳10,500/month for Local SEO to ৳34,500/month for Local SEO, website, Google Ads and social media.",

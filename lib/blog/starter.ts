@@ -70,6 +70,14 @@ export const STARTER_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "Why is my business not showing on Google Maps?",
+        a: "Common reasons are an unverified profile, the wrong category, missing details, few reviews or being far from the searcher. Fixing your profile is the first step.",
+      },
+      {
+        q: "How do I get to the top of Google Maps for free?",
+        a: "Complete your Google Business Profile, collect reviews, post regularly and keep your details consistent everywhere. It takes time but costs nothing.",
+      },
+      {
         q: "How many businesses appear in the Google Map Pack?",
         a: "Usually three, shown under a map above the regular search results. More appear when someone taps \"More places\".",
       },
@@ -141,6 +149,14 @@ export const STARTER_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Is a Google Business Profile free?",
+        a: "Yes. Creating and managing a Google Business Profile is free.",
+      },
+      {
+        q: "How do I verify my Google Business Profile?",
+        a: "Google offers verification methods such as phone, email, video or postcard, depending on your business. Follow the steps shown in your profile.",
+      },
       {
         q: "How often should I post on my Google Business Profile?",
         a: "Aim for at least one post a week. Regular activity keeps your profile fresh for customers and Google.",
@@ -220,6 +236,14 @@ export const STARTER_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "Is a Facebook page enough for a small business?",
+        a: "It can be a start, but a website helps you rank on Google, run better ads and own your presence.",
+      },
+      {
+        q: "What is the cheapest way to get a business website?",
+        a: "A simple template site is cheapest, but a lead-focused site with service pages usually brings far better results.",
+      },
+      {
         q: "Can a Facebook page rank on Google?",
         a: "Sometimes for your business name, but rarely for service searches like \"dentist in Uttara\". A website with service pages does that much better.",
       },
@@ -293,6 +317,14 @@ export const STARTER_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "Why are my Google Ads not getting calls?",
+        a: "Common causes are broad targeting, irrelevant searches, slow or generic landing pages and missing call tracking.",
+      },
+      {
+        q: "How do I stop wasting money on Google Ads?",
+        a: "Target only areas you serve, add negative keywords, send clicks to service pages and track every lead.",
+      },
+      {
         q: "What are negative keywords?",
         a: "Words you tell Google not to show your ads for, such as \"free\" or \"job\", so you don't pay for irrelevant clicks.",
       },
@@ -364,6 +396,14 @@ export const STARTER_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Should I post the same thing on Facebook and Instagram?",
+        a: "You can share similar content, but adjust format: reels and visuals for Instagram, slightly more text and links for Facebook.",
+      },
+      {
+        q: "Is Instagram better than Facebook for sales?",
+        a: "It depends on your product. Visual brands often sell well on Instagram, while Facebook reaches a broader audience in Bangladesh.",
+      },
       {
         q: "Can I post the same content on both?",
         a: "Yes, with small adjustments: vertical videos and strong visuals for Instagram, and slightly more text and links for Facebook.",

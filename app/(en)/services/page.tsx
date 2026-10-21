@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
   CtaBand,
+  FaqSection,
   IndustriesSection,
   PageHero,
   ProcessSection,
   ServiceDetails,
   ServicesSection,
 } from "@/components/Sections";
+import { SERVICES_FAQS } from "@/lib/faqs";
 import { pageMetadata, serviceLd } from "@/lib/seo";
 import { SERVICES } from "@/lib/site";
 
@@ -35,6 +37,7 @@ export default function ServicesPage() {
       <ServiceDetails />
       <IndustriesSection />
       <ProcessSection />
+      <FaqSection items={SERVICES_FAQS} title="Questions about our services" />
       <CtaBand />
     </>
   );

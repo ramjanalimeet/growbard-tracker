@@ -45,6 +45,10 @@ export default async function LocationPage({ params }: Props) {
       a: `It depends on how many businesses compete in your category in ${l.name}. Most businesses see movement within 30–60 days and steady results within 3–6 months.`,
     },
     {
+      q: `What is the best way to get more customers in ${l.name}?`,
+      a: `For most local businesses in ${l.name}, start with a complete Google Business Profile and genuine reviews so you appear on Google Maps, then add a fast website and Google Ads for your most profitable services.`,
+    },
+    {
       q: `Can you help a business in ${l.name} reach customers in other districts?`,
       a: `Yes. We can create pages and campaigns for every area you serve, so customers in ${l.name} and beyond can find you.`,
     },

@@ -67,6 +67,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I track leads from Google Ads?",
+        a: "Set up conversion tracking for calls, WhatsApp clicks and form submissions.",
+      },
+      {
+        q: "What is a good cost per lead?",
+        a: "It depends on what a customer is worth to you. Work backwards from your profit per customer.",
+      },
       { q: "Are Google Ads leads better than Facebook leads?", a: "They're often higher intent because people are actively searching. Facebook leads can be cheaper but may need more follow-up." },
       { q: "How many leads can I expect?", a: "It depends on your budget, industry, area and landing page. After a few weeks of tracking, you'll know your real cost per lead." },
       { q: "Do I need a website for Google Ads?", a: "A fast landing page gets far better results, although call-only ads can work for some businesses." },
@@ -145,6 +153,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Is Performance Max better than Search?",
+        a: "Not always. Search gives more control; Performance Max can scale well once tracking and creative are strong.",
+      },
+      {
+        q: "Does Performance Max work for small budgets?",
+        a: "It can, but Search campaigns are usually a better starting point for small budgets.",
+      },
       { q: "Can Performance Max show my business on Google Maps?", a: "Yes, especially when your Google Business Profile is linked to your Google Ads account." },
       { q: "Is Performance Max good for a small budget?", a: "It can work, but small budgets usually get better control and clearer results from Search campaigns first." },
       { q: "Do I need videos?", a: "Videos help. If you don't provide any, Google may create basic ones from your images, which usually look less professional." },
@@ -212,6 +228,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I know if my Google Ads are working?",
+        a: "Check conversion tracking, cost per lead and whether leads become customers.",
+      },
+      {
+        q: "What is the most common Google Ads mistake?",
+        a: "Running ads without reliable conversion tracking.",
+      },
       { q: "Is it safe to give an agency access?", a: "Yes, if you grant access through Google Ads' user management. You can choose read-only access and remove it at any time." },
       { q: "How often should I audit my account?", a: "A full audit every few months, with weekly checks of search terms and conversions." },
       { q: "Can I do this audit myself?", a: "Yes. This checklist covers the main points; an expert audit adds benchmarks and fixes." },
@@ -279,6 +303,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Which is better for small business, Google or Facebook ads?",
+        a: "Google for services people search for; Facebook for visual products and building demand.",
+      },
+      {
+        q: "Can I use Google and Facebook ads together?",
+        a: "Yes. Google captures demand and Facebook builds reach and retargets visitors.",
+      },
       { q: "Which is cheaper, Google or Facebook ads?", a: "Facebook clicks are often cheaper, but Google leads are often higher intent. Compare cost per customer, not cost per click." },
       { q: "Can I run both with a small budget?", a: "It's usually better to master one channel first, then add the second." },
       { q: "Do I need a website for Facebook ads?", a: "Not always. Click-to-WhatsApp and lead form ads work without a website, though a website helps build trust." },
@@ -360,6 +392,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much do YouTube ads cost?",
+        a: "Costs depend on targeting and format; you set the budget and can start small.",
+      },
+      {
+        q: "Are YouTube ads good for local businesses?",
+        a: "They work well for awareness and retargeting alongside search ads.",
+      },
       { q: "Do I need a professional video?", a: "Not always. A clear, well-lit phone video showing real work often performs well for local businesses." },
       { q: "Do I pay if people skip my ad?", a: "For skippable in-stream ads, you typically pay when viewers watch long enough or interact, depending on the bidding setup." },
       { q: "Can YouTube ads bring leads directly?", a: "They can, but they usually work best combined with search ads and retargeting." },
@@ -427,6 +467,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "What does Facebook page management include?",
+        a: "Content planning, designed posts, videos, replies, page optimization and monthly reporting.",
+      },
+      {
+        q: "How do I grow my Facebook business page?",
+        a: "Post consistently, reply fast, share real work and use targeted ads to reach new people.",
+      },
       { q: "How many posts per month are included?", a: "It depends on the package. Consistent, quality posting every week matters more than a high number." },
       { q: "Do you reply to messages?", a: "Yes, during agreed hours, with quick replies for common questions and hand-off to your team for bookings." },
       { q: "Will I approve posts before they go live?", a: "Yes. We share the content plan in advance so you can review it." },
@@ -501,6 +549,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I get customers from Instagram?",
+        a: "Post reels, use a clear call to action, reply to DMs quickly and run targeted ads.",
+      },
+      {
+        q: "Is Instagram good for small businesses in Bangladesh?",
+        a: "Yes, especially for visual businesses like fashion, food, beauty and interiors.",
+      },
       { q: "How often should a business post on Instagram?", a: "Three to four quality posts a week plus regular stories is a good, sustainable rhythm." },
       { q: "Are reels important?", a: "Yes. Reels are one of the best ways to reach people who don't follow you yet." },
       { q: "Can I run Instagram ads without Facebook?", a: "Instagram ads are managed through Meta's tools, usually linked to a Facebook page." },
@@ -577,6 +633,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do click to WhatsApp ads work?",
+        a: "People tap the ad and a WhatsApp chat opens with your business, often with a pre-filled message.",
+      },
+      {
+        q: "Are WhatsApp ads good for lead generation?",
+        a: "Yes, especially in Bangladesh where many customers prefer messaging over forms.",
+      },
       { q: "Do I need the WhatsApp Business app?", a: "It's strongly recommended: it adds a business profile, greeting messages, quick replies and labels." },
       { q: "Can Instagram ads open WhatsApp?", a: "Yes. Click to WhatsApp ads can run on both Facebook and Instagram." },
       { q: "How do I track sales from WhatsApp ads?", a: "Label chats from ads in WhatsApp Business and note which ones become customers." },
@@ -650,6 +714,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much does social media management cost in Bangladesh?",
+        a: "It depends on posts, videos, platforms and whether ads are included. Social media is part of our Dominate plan at ৳34,500/month.",
+      },
+      {
+        q: "What should a social media package include?",
+        a: "A content plan, designed posts, videos, replies, ad management and a monthly report on leads.",
+      },
       { q: "Is the ad budget included in social media packages?", a: "Usually not. The ad budget is paid directly to Meta, separate from the management fee." },
       { q: "Can I start with a small package?", a: "Yes. Start with consistent posting and replies, then add ads once your page looks active and trustworthy." },
       { q: "Which platforms should I include?", a: "Facebook for most businesses, Instagram for visual brands and LinkedIn for B2B." },
@@ -726,6 +798,14 @@ export const ADS_SOCIAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Is LinkedIn useful for B2B in Bangladesh?",
+        a: "Yes, especially for exporters, IT firms and professional services targeting international clients.",
+      },
+      {
+        q: "What should a company post on LinkedIn?",
+        a: "Capability updates, certifications, factory or team stories and leadership insights.",
+      },
       { q: "Is LinkedIn useful for Bangladeshi exporters?", a: "Yes. International buyers and sourcing agents use LinkedIn to research suppliers and connect with them." },
       { q: "Should we run LinkedIn ads?", a: "LinkedIn ads can target by job title and industry, but they're relatively expensive. Start with strong organic content and a good website." },
       { q: "How often should we post?", a: "At least once a week from the company page, plus regular posts from key people." },

@@ -4,8 +4,9 @@ import Footer from "@/components/Footer";
 import GoogleBadge from "@/components/GoogleBadge";
 import Header from "@/components/Header";
 import { getGoogleData } from "@/lib/google";
+import { languageAlternates } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
-import "./globals.css";
+import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Growbard helps local businesses get more calls and customers with Local SEO, website development, Google Ads and social media marketing.",
   applicationName: SITE.name,
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: languageAlternates("/") },
   openGraph: {
     title: `${SITE.name} | ${SITE.tagline}`,
     description:
@@ -31,8 +32,9 @@ export const metadata: Metadata = {
     locale: "en_BD",
     type: "website",
     url: "/",
+    images: ["/opengraph-image"],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
   robots: { index: true, follow: true },
 };
 

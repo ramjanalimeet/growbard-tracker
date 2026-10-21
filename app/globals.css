@@ -2543,6 +2543,7 @@ a.chip-link--all:hover {
 .division {
   break-inside: avoid;
   margin-bottom: 22px;
+  scroll-margin-top: 100px;
 }
 
 .division h3 {
@@ -2833,4 +2834,189 @@ a.chip-link--all:hover {
   padding-left: 18px;
   display: grid;
   gap: 6px;
+}
+
+/* Google reviews card grid */
+.g-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.g-cards .g-summary,
+.g-cards .g-review {
+  height: 100%;
+}
+
+.g-map-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.g-map-card iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+  display: block;
+}
+
+.g-map-card__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: #1a73e8;
+  border-top: 1px solid var(--line);
+}
+
+.g-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  color: inherit;
+}
+
+.g-cta-card strong {
+  font-size: 1.15rem;
+}
+
+.g-cta-card span {
+  color: var(--ink-2);
+}
+
+.g-cta-card .btn {
+  color: #fff;
+  margin-top: 6px;
+}
+
+.g-cta-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(66, 133, 244, 0.5);
+  box-shadow: var(--shadow);
+}
+
+.g-cta-card--write {
+  background: var(--tint);
+}
+
+/* About page */
+.about-markets ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.about-markets li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.about-markets li > span:last-child {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.about-markets small {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.about-intro p {
+  color: var(--ink-2);
+}
+
+/* Language switcher */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 6px 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lang-switch svg {
+  margin-right: 4px;
+  color: var(--brand);
+}
+
+.lang-switch a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--ink-2);
+}
+
+.lang-switch a:hover {
+  color: var(--brand);
+}
+
+.lang-switch a.is-active {
+  background: var(--brand);
+  color: #fff;
+}
+
+.nav__lang {
+  padding: 12px 0 0;
+}
+
+/* Bangla pages use a Bengali font, with Latin text in the brand font */
+html[lang="bn"] {
+  --font-body: var(--font-jakarta), var(--font-bengali), system-ui;
+  --font-heading: var(--font-jakarta), var(--font-bengali), system-ui;
+}
+
+html[lang="bn"] body {
+  line-height: 1.75;
+}
+
+html[lang="bn"] h1,
+html[lang="bn"] h2,
+html[lang="bn"] h3 {
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* Bangla home hero */
+.bn-hero h1 {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+}
+
+.bn-hero__actions {
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.package__name {
+  font-size: 1.2rem;
+  margin: 0 0 0.5em;
+}
+
+/* Keep the switcher compact inside the mobile menu */
+.nav .lang-switch a:not(.btn) {
+  padding: 6px 12px;
+  border-bottom: 0;
+}
+
+.nav .lang-switch a.is-active {
+  color: #fff;
+}
+
+.nav__lang {
+  align-self: flex-start;
 }

@@ -98,6 +98,14 @@ export const LOCAL_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "What is included in local SEO?",
+        a: "Google Business Profile optimization, reviews, citations, location and service pages, technical basics and monthly reporting.",
+      },
+      {
+        q: "Can I do local SEO myself?",
+        a: "Yes, many basics are free. An agency saves time and brings experience, especially in competitive areas.",
+      },
+      {
         q: "Is local SEO worth it for a small business in Bangladesh?",
         a: "Yes. People searching on Google Maps are usually ready to buy, so local SEO tends to bring high-quality leads at a lower cost than most advertising.",
       },
@@ -211,6 +219,14 @@ export const LOCAL_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "How do I choose an SEO company?",
+        a: "Look for clear reporting on leads, work on your Google profile and reviews, ownership of accounts and no ranking guarantees.",
+      },
+      {
+        q: "What questions should I ask an SEO agency?",
+        a: "Ask what they'll do monthly, how they track leads, who owns the accounts and whether there's a long-term contract.",
+      },
+      {
         q: "How much does an SEO agency in Dhaka charge?",
         a: "Prices vary widely depending on scope. Growbard's Local SEO plan starts at ৳10,500 per month, including Google Business Profile optimization and monthly reporting.",
       },
@@ -297,6 +313,14 @@ export const LOCAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How do I optimize my Google Business Profile?",
+        a: "Choose precise categories, list services, add photos, keep hours accurate, post weekly and collect and reply to reviews.",
+      },
+      {
+        q: "Do Google posts help rankings?",
+        a: "Regular posts keep your profile active and give customers more reasons to choose you.",
+      },
       {
         q: "Is Google Business Profile free?",
         a: "Yes, the profile itself is free. An optimization service charges for the time and expertise to set it up properly and keep it active every month.",
@@ -400,6 +424,14 @@ export const LOCAL_POSTS: PostData[] = [
     ],
     faqs: [
       {
+        q: "How can I rank my business in Chattogram?",
+        a: "Optimize your Google profile, build reviews, create area pages and make sure your website is fast on mobile.",
+      },
+      {
+        q: "Is SEO different in Chattogram than in Dhaka?",
+        a: "The method is the same, but competition, neighbourhoods and spelling variations like \"Chittagong\" differ.",
+      },
+      {
         q: "Do you need to be based in Chattogram to do SEO there?",
         a: "No. SEO is done online. What matters is understanding the local market and setting up your Google profile and website for the areas you serve.",
       },
@@ -493,6 +525,14 @@ export const LOCAL_POSTS: PostData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How can Sylhet businesses reach UK customers?",
+        a: "Use Google and Meta ads targeted at the UK, an English website and WhatsApp contact for time-zone-friendly messaging.",
+      },
+      {
+        q: "What marketing works for hotels in Sylhet?",
+        a: "A strong Google profile with photos and reviews, Instagram content and a booking-friendly website.",
+      },
       {
         q: "Can you target customers in the UK from Sylhet?",
         a: "Yes. Google Ads and Meta ads can target audiences by country and interest, so you can reach Bangladeshis living in the UK and elsewhere.",

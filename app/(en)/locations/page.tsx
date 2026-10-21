@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { CtaBand, PageHero, SectionHead } from "@/components/Sections";
-import { DIVISIONS, LOCATIONS } from "@/lib/locations";
+import { CtaBand, FaqSection, PageHero, SectionHead } from "@/components/Sections";
+import { LOCATIONS_FAQS } from "@/lib/faqs";
+import { divisionId, DIVISIONS, LOCATIONS } from "@/lib/locations";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -28,7 +29,7 @@ export default function LocationsPage() {
           />
           <div className="divisions">
             {DIVISIONS.map((d) => (
-              <div key={d} className="card division">
+              <div key={d} id={divisionId(d)} className="card division">
                 <h3>{d} Division</h3>
                 <ul>
                   {LOCATIONS.filter((l) => l.division === d).map((l) => (
@@ -45,6 +46,7 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
+      <FaqSection items={LOCATIONS_FAQS} title="Questions about where we work" />
       <CtaBand />
     </>
   );

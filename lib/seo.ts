@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { languageAlternates, langOf } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 
 export const absoluteUrl = (path: string) => `${SITE.url}${path === "/" ? "" : path}`;
@@ -26,16 +27,24 @@ export function pageMetadata({
   return {
     title: fitsSuffix ? title : { absolute: title },
     description,
-    alternates: { canonical: path },
-    openGraph: { title, description, url: path, type, siteName: SITE.name, locale: "en_BD", images: [SHARE_IMAGE] },
+    alternates: { canonical: path, languages: languageAlternates(path) },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      type,
+      siteName: SITE.name,
+      locale: langOf(path) === "bn" ? "bn_BD" : "en_BD",
+      images: [SHARE_IMAGE],
+    },
     twitter: { card: "summary_large_image", title, description, images: [SHARE_IMAGE] },
   };
 }
 
 export type Crumb = { label: string; href?: string };
 
-export function breadcrumbLd(crumbs: Crumb[]) {
-  const all = [{ label: "Home", href: "/" }, ...crumbs];
+export function breadcrumbLd(crumbs: Crumb[], home: Crumb = { label: "Home", href: "/" }) {
+  const all = [home, ...crumbs];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
