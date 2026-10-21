@@ -60,13 +60,13 @@ export default function Header({ lang = "en" }: { lang?: Lang }) {
           </nav>
 
           <div className="header__actions">
-            <LanguageSwitcher />
-            <a href={SITE.phoneHref} className="btn btn--white nav__phone">
-              <Icon name="phone" size={16} /> {SITE.phone}
+            <a href={SITE.phoneHref} className="btn btn--white nav__phone" aria-label={`${t.call}: ${SITE.phone}`}>
+              <Icon name="phone" size={16} /> <span className="nav__phone-text">{SITE.phone}</span>
             </a>
             <Link href={t.bookHref} className="btn btn--primary">
               {t.book} <Icon name="arrow" size={16} />
             </Link>
+            <LanguageSwitcher />
           </div>
 
           <button
