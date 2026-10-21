@@ -62,8 +62,13 @@ export default function Hero() {
           </ul>
 
           <div className="hero__actions">
-            <a href="#contact" className="btn btn--primary btn--xl">
-              Get a free quote <Icon name="arrow" size={18} />
+            <a
+              href={SITE.whatsappQuoteHref}
+              className="btn btn--whatsapp btn--xl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="whatsapp" size={20} /> Get a free quote
             </a>
             <a href={SITE.phoneHref} className="btn btn--white btn--xl">
               <Icon name="phone" size={18} /> Call {SITE.phone}

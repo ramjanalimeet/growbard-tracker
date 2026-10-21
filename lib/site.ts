@@ -11,6 +11,9 @@ export const SITE = {
   whatsappHref:
     "https://wa.me/8801839295114?text=" +
     encodeURIComponent("Hi Growbard, I'd like to know more about your services."),
+  whatsappQuoteHref:
+    "https://wa.me/8801839295114?text=" +
+    encodeURIComponent("Hi Growbard, I'd like a free quote for my business."),
   hours: "Mon – Fri, 9am – 6pm",
   // YouTube video ID for the hero video card (the part after "watch?v=").
   // Leave empty to show the animated dashboard preview instead.

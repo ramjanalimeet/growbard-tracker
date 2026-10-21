@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Icon from "@/components/Icon";
 import { SERVICES, SITE } from "@/lib/site";
 
 // No backend yet: the form opens the visitor's email app with the details
@@ -63,6 +64,15 @@ export default function ContactForm() {
       <button type="submit" className="btn btn--primary btn--block">
         Get My Free Growth Plan
       </button>
+      <p className="form__or">or</p>
+      <a
+        href={SITE.whatsappQuoteHref}
+        className="btn btn--whatsapp btn--block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="whatsapp" size={20} /> Get a free quote on WhatsApp
+      </a>
       {sent && (
         <p className="form__note">
           Thanks! Your email app should open now. If it didn&apos;t, email us at{" "}
