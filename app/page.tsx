@@ -3,6 +3,8 @@ import {
   ContactSection,
   CtaBand,
   FaqSection,
+  IndustriesSection,
+  LocationsSection,
   PricingSection,
   ProcessSection,
   ReviewsSection,
@@ -40,7 +42,9 @@ export default function Home() {
       <Hero />
       <StatsSection />
       <ServicesSection more />
+      <IndustriesSection />
       <WhySection more />
+      <LocationsSection />
       <ProcessSection />
       <PricingSection more />
       <ReviewsSection more />

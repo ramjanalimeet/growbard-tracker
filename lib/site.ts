@@ -29,7 +29,15 @@ export const SITE = {
 export const NAV = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Why Us", href: "/why-us" },
+  { label: "Locations", href: "/locations" },
+  { label: "Industries", href: "/industries" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+];
+
+// Pages not in the main menu, linked from the footer.
+export const COMPANY_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "Reviews", href: "/reviews" },
   { label: "Blog", href: "/blog" },
@@ -43,6 +51,9 @@ export type Service = {
   blurb: string;
   description: string;
   points: string[];
+  // Pricing plans that include this service.
+  plans: string[];
+  faqs: { q: string; a: string }[];
 };
 
 export const SERVICES: Service[] = [
@@ -60,6 +71,21 @@ export const SERVICES: Service[] = [
       "Review generation strategy",
       "Local landing pages & on-page SEO",
     ],
+    plans: ["Starter", "Growth", "Dominate"],
+    faqs: [
+      {
+        q: "What is Local SEO?",
+        a: "Local SEO is the work that helps your business appear in Google Maps and local search results when people nearby search for what you offer. It covers your Google Business Profile, reviews, citations and location-focused website pages.",
+      },
+      {
+        q: "How long does Local SEO take to work?",
+        a: "Most businesses see movement within 30\u201360 days and steady results within 3\u20136 months, depending on how competitive your area and category are.",
+      },
+      {
+        q: "Do I need a physical office to rank on Google Maps?",
+        a: "No. Service-area businesses can rank too, as long as the Google Business Profile is set up correctly for the areas you serve.",
+      },
+    ],
   },
   {
     id: "web-development",
@@ -74,6 +100,21 @@ export const SERVICES: Service[] = [
       "Lightning-fast, mobile-first build",
       "Conversion-focused layouts & forms",
       "SEO-ready structure from day one",
+    ],
+    plans: ["Growth", "Dominate"],
+    faqs: [
+      {
+        q: "Is website maintenance included?",
+        a: "Yes. Growth and Dominate plans include website development and ongoing maintenance: updates, backups, security and small content changes.",
+      },
+      {
+        q: "Will my website work well on mobile?",
+        a: "Yes. Every site we build is mobile-first, fast and designed so visitors can call or message you on WhatsApp in one tap.",
+      },
+      {
+        q: "Will the website be SEO-friendly?",
+        a: "Yes. Clean page structure, fast loading, proper titles and descriptions, and structured data are built in from day one.",
+      },
     ],
   },
   {
@@ -90,6 +131,21 @@ export const SERVICES: Service[] = [
       "Ad copy and landing page testing",
       "Call & conversion tracking setup",
     ],
+    plans: ["Growth", "Dominate"],
+    faqs: [
+      {
+        q: "Is the ad budget included in the price?",
+        a: "No. Our fee covers setting up and managing your campaigns. You pay your ad budget directly to Google and stay in full control of it.",
+      },
+      {
+        q: "How quickly can Google Ads bring leads?",
+        a: "Campaigns can start bringing calls and enquiries within days of going live. We then improve results week by week.",
+      },
+      {
+        q: "How do I know if my ads are working?",
+        a: "We set up call, form and WhatsApp tracking so you can see exactly how many leads your ads bring and what each one costs.",
+      },
+    ],
   },
   {
     id: "social-media",
@@ -104,6 +160,21 @@ export const SERVICES: Service[] = [
       "Scroll-stopping posts, reels & graphics",
       "Targeted Meta ad campaigns",
       "Community engagement & monthly reporting",
+    ],
+    plans: ["Dominate"],
+    faqs: [
+      {
+        q: "Which platforms do you manage?",
+        a: "Mainly Facebook and Instagram, where most local customers in Bangladesh spend their time. We can add LinkedIn for B2B businesses.",
+      },
+      {
+        q: "Do you create the content?",
+        a: "Yes. We plan, design and write posts, graphics and short videos, and handle publishing and community replies.",
+      },
+      {
+        q: "Is paid advertising included?",
+        a: "Yes, we manage Meta ad campaigns as part of social media marketing. The ad budget itself is paid directly to Meta.",
+      },
     ],
   },
 ];

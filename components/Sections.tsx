@@ -2,7 +2,11 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { GoogleSummary, ReviewCard } from "@/components/GoogleReviews";
 import Icon from "@/components/Icon";
+import JsonLd from "@/components/JsonLd";
 import { getGoogleData } from "@/lib/google";
+import { INDUSTRIES } from "@/lib/industries";
+import { LOCATIONS } from "@/lib/locations";
+import { breadcrumbLd, faqLd, type Crumb } from "@/lib/seo";
 import {
   FAQS,
   GOOGLE,
@@ -19,20 +23,32 @@ export function PageHero({
   eyebrow,
   title,
   lead,
+  crumbs = [{ label: eyebrow }],
 }: {
   eyebrow: string;
   title: string;
   lead: string;
+  // Trail after "Home"; the last item is the current page.
+  crumbs?: Crumb[];
 }) {
   return (
     <section className="page-hero">
+      <JsonLd data={breadcrumbLd(crumbs)} />
       <div className="hero__blob hero__blob--left" aria-hidden="true" />
       <div className="hero__dots hero__dots--right" aria-hidden="true" />
       <div className="container page-hero__inner">
         <nav className="crumbs" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">{eyebrow}</span>
+          {crumbs.map((c, i) => (
+            <span key={c.label} className="crumbs__item">
+              <span aria-hidden="true">/</span>
+              {c.href && i < crumbs.length - 1 ? (
+                <Link href={c.href}>{c.label}</Link>
+              ) : (
+                <span aria-current="page">{c.label}</span>
+              )}
+            </span>
+          ))}
         </nav>
         <h1>{title}</h1>
         <p className="lead">{lead}</p>
@@ -41,7 +57,7 @@ export function PageHero({
   );
 }
 
-function SectionHead({ eyebrow, title, lead }: { eyebrow: string; title: string; lead?: string }) {
+export function SectionHead({ eyebrow, title, lead }: { eyebrow: string; title: string; lead?: string }) {
   return (
     <div className="section__head">
       <p className="eyebrow">{eyebrow}</p>
@@ -100,7 +116,7 @@ export function ServicesSection({ more = false }: { more?: boolean }) {
                   </li>
                 ))}
               </ul>
-              <Link href={`/services#${s.id}`} className="service__link">
+              <Link href={`/services/${s.id}`} className="service__link">
                 Learn more <Icon name="arrow" size={16} />
               </Link>
             </article>
@@ -145,8 +161,8 @@ export function ServiceDetails() {
                 >
                   <Icon name="whatsapp" size={18} /> Chat on WhatsApp
                 </a>
-                <Link href="/pricing" className="btn btn--outline">
-                  See pricing
+                <Link href={`/services/${s.id}`} className="btn btn--outline">
+                  {s.title} details
                 </Link>
               </div>
             </div>
@@ -168,7 +184,7 @@ export function WhySection({ more = false }: { more?: boolean }) {
             Most agencies sell you reports. We deliver phone calls, bookings and revenue, and
             show you exactly where every taka went.
           </p>
-          <Link href={more ? "/why-us" : "/contact"} className="btn btn--primary">
+          <Link href={more ? "/about" : "/contact"} className="btn btn--primary">
             {more ? "Why choose Growbard" : "Book a Free Strategy Call"}
           </Link>
         </div>
@@ -388,6 +404,7 @@ export function FaqSection({
 }) {
   return (
     <section className="section">
+      <JsonLd data={faqLd(items)} />
       <div className="container container--narrow">
         <SectionHead eyebrow="FAQ" title={title} />
         <div className="faq">
@@ -452,6 +469,59 @@ export function ContactSection() {
         <div className="card contact__form">
           <ContactForm />
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function IndustriesSection({ title = "Industries we serve" }: { title?: string }) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHead
+          eyebrow="Industries"
+          title={title}
+          lead="Marketing built around how customers in your industry search, compare and buy."
+        />
+        <div className="tiles">
+          {INDUSTRIES.map((i) => (
+            <Link key={i.slug} href={`/industries/${i.slug}`} className="card tile">
+              <span className="tile__icon">
+                <Icon name={i.icon} size={26} />
+              </span>
+              <strong>{i.name}</strong>
+              <span className="tile__more">
+                Learn more <Icon name="arrow" size={14} />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Teaser of the biggest cities with a link to all locations.
+export function LocationsSection() {
+  const top = LOCATIONS.filter((l) =>
+    ["dhaka", "chattogram", "sylhet", "gazipur", "narayanganj", "khulna", "rajshahi", "cumilla", "mymensingh", "bogura", "rangpur", "coxs-bazar"].includes(l.slug),
+  );
+  return (
+    <section className="section section--tint">
+      <div className="container">
+        <SectionHead
+          eyebrow="Locations"
+          title="Serving businesses across Bangladesh"
+          lead={`From Dhaka to Panchagarh, we help businesses in ${LOCATIONS.length} districts grow online.`}
+        />
+        <div className="chips">
+          {top.map((l) => (
+            <Link key={l.slug} href={`/locations/${l.slug}`} className="chip-link">
+              <Icon name="pin" size={16} /> {l.name}
+            </Link>
+          ))}
+        </div>
+        <MoreLink href="/locations">View all {LOCATIONS.length} locations</MoreLink>
       </div>
     </section>
   );

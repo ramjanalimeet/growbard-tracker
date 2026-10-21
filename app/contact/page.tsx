@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ContactSection, FaqSection, MapSection, PageHero } from "@/components/Sections";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact Us: Call or WhatsApp for a Free Growth Plan",
   description:
     "Contact Growbard by phone, WhatsApp or email for a free strategy call and marketing audit.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

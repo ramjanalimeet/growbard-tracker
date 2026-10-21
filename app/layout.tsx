@@ -21,13 +21,19 @@ export const metadata: Metadata = {
   },
   description:
     "Growbard helps local businesses get more calls and customers with Local SEO, website development, Google Ads and social media marketing.",
+  applicationName: SITE.name,
+  alternates: { canonical: "/" },
   openGraph: {
     title: `${SITE.name} | ${SITE.tagline}`,
     description:
       "Local SEO, website development, Google Ads and social media marketing for local businesses.",
-    images: ["/logo.png"],
+    siteName: SITE.name,
+    locale: "en_BD",
     type: "website",
+    url: "/",
   },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import {
   CtaBand,
   FaqSection,
@@ -8,12 +9,12 @@ import {
 } from "@/components/Sections";
 import { PRICING_FAQS } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Pricing",
+export const metadata: Metadata = pageMetadata({
+  title: "Pricing: Local SEO & Digital Marketing Plans in Taka",
   description:
     "Growbard pricing: Starter ৳10,500, Growth ৳24,500 and Dominate ৳34,500 per month for Local SEO, websites, Google Ads and social media marketing.",
-  alternates: { canonical: "/pricing" },
-};
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (

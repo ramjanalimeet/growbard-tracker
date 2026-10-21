@@ -15,6 +15,12 @@ npm run build
 ## Editing content
 
 All copy (services, packages, reviews, FAQ, contact details) lives in `lib/site.ts`.
+Locations are in `lib/locations.ts`, industries in `lib/industries.ts` and blog
+posts in `lib/posts.ts`; each entry gets its own page, is added to the sitemap
+and gets SEO metadata and structured data automatically.
+
+Set `SITE.url` in `lib/site.ts` to the real domain before launch: canonical
+URLs, the sitemap and share images are built from it.
 The social media links there are **placeholders**, so replace them before launch.
 
 The contact form opens WhatsApp with the visitor's details typed out as a

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NAV, SERVICES, SITE } from "@/lib/site";
+import { INDUSTRIES } from "@/lib/industries";
+import { LOCATIONS } from "@/lib/locations";
+import { COMPANY_LINKS, SERVICES, SITE } from "@/lib/site";
+
+const FOOTER_CITIES = ["dhaka", "chattogram", "sylhet", "gazipur", "narayanganj", "khulna", "rajshahi"];
 
 export default function Footer() {
   return (
@@ -18,15 +22,38 @@ export default function Footer() {
           <ul>
             {SERVICES.map((s) => (
               <li key={s.id}>
-                <Link href={`/services#${s.id}`}>{s.title}</Link>
+                <Link href={`/services/${s.id}`}>{s.title}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
+          <h4>Industries</h4>
+          <ul>
+            {INDUSTRIES.map((i) => (
+              <li key={i.slug}>
+                <Link href={`/industries/${i.slug}`}>{i.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4>Locations</h4>
+          <ul>
+            {LOCATIONS.filter((l) => FOOTER_CITIES.includes(l.slug)).map((l) => (
+              <li key={l.slug}>
+                <Link href={`/locations/${l.slug}`}>{l.name}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/locations">All locations →</Link>
+            </li>
+          </ul>
+        </div>
+        <div>
           <h4>Company</h4>
           <ul>
-            {NAV.filter((n) => n.href !== "/services").map((n) => (
+            {COMPANY_LINKS.map((n) => (
               <li key={n.href}>
                 <Link href={n.href}>{n.label}</Link>
               </li>

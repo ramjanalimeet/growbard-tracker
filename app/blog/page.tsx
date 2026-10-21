@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PostCard from "@/components/PostCard";
 import { CtaBand, PageHero } from "@/components/Sections";
 import { POSTS } from "@/lib/posts";
 
-export const metadata: Metadata = {
-  title: "Blog",
+export const metadata: Metadata = pageMetadata({
+  title: "Blog: Local SEO & Digital Marketing Tips",
   description:
     "Practical guides on Local SEO, Google Business Profile, websites, Google Ads and social media marketing for local businesses.",
-  alternates: { canonical: "/blog" },
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   const [featured, ...rest] = POSTS;

@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import {
   CtaBand,
+  IndustriesSection,
   PageHero,
   ProcessSection,
   ServiceDetails,
   ServicesSection,
 } from "@/components/Sections";
+import { pageMetadata, serviceLd } from "@/lib/seo";
+import { SERVICES } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Services",
+export const metadata: Metadata = pageMetadata({
+  title: "Services: Local SEO, Websites, Google Ads & Social Media",
   description:
-    "Local SEO, website development, Google Ads and social media marketing services from Growbard.",
-  alternates: { canonical: "/services" },
-};
+    "Local SEO, website development, Google Ads and social media marketing services for businesses in Bangladesh, managed by one team.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={SERVICES.map((s) =>
+          serviceLd({ name: s.title, description: s.description, path: `/services/${s.id}` }),
+        )}
+      />
       <PageHero
         eyebrow="Services"
         title="Your growth partner for more customers"
@@ -24,6 +33,7 @@ export default function ServicesPage() {
       />
       <ServicesSection />
       <ServiceDetails />
+      <IndustriesSection />
       <ProcessSection />
       <CtaBand />
     </>
