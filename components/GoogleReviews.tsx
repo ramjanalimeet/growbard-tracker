@@ -41,9 +41,17 @@ export function Stars({ rating, size = 16 }: { rating: number; size?: number }) 
   );
 }
 
-export function ReviewCard({ review }: { review: Review }) {
+// Each card links to the review on Google (or the profile when there's no
+// direct link).
+export function ReviewCard({ review, fallbackUrl }: { review: Review; fallbackUrl: string }) {
   return (
-    <figure className="card g-review">
+    <a
+      href={review.url ?? fallbackUrl}
+      className="card g-review"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Read ${review.author}'s review on Google`}
+    >
       <div className="g-review__head">
         {review.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -51,15 +59,41 @@ export function ReviewCard({ review }: { review: Review }) {
         ) : (
           <span className="g-review__avatar">{review.author[0]}</span>
         )}
-        <figcaption>
+        <span className="g-review__who">
           <strong>{review.author}</strong>
           {review.when && <small>{review.when}</small>}
-        </figcaption>
+        </span>
         <GoogleLogo size={20} />
       </div>
       <Stars rating={review.rating} />
-      <blockquote>{review.text}</blockquote>
-    </figure>
+      <p className="g-review__text">{review.text}</p>
+      <span className="g-review__more">Read on Google →</span>
+    </a>
+  );
+}
+
+// Star breakdown, like Google's. Only drawn when the split is certain: a 5.0
+// average means every review is five stars.
+export function RatingBars({ data }: { data: GoogleData }) {
+  if (data.rating < 5 || !data.reviewCount) return null;
+  return (
+    <a
+      href={data.profileUrl}
+      className="g-bars"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`All ${data.reviewCount} reviews are five stars. Read them on Google`}
+    >
+      {[5, 4, 3, 2, 1].map((n) => (
+        <span key={n} className="g-bars__row">
+          <span>{n}★</span>
+          <span className="g-bars__track">
+            <span style={{ width: n === 5 ? "100%" : "0%" }} />
+          </span>
+          <span>{n === 5 ? data.reviewCount : 0}</span>
+        </span>
+      ))}
+    </a>
   );
 }
 
@@ -76,6 +110,7 @@ export function GoogleSummary({ data }: { data: GoogleData }) {
       <p className="g-summary__count">
         Based on {data.reviewCount} Google review{data.reviewCount === 1 ? "" : "s"}
       </p>
+      <RatingBars data={data} />
       <div className="g-summary__actions">
         <a href={data.writeReviewUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
           Write a review

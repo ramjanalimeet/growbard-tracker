@@ -310,7 +310,7 @@ export async function ReviewsSection({ more = false }: { more?: boolean }) {
           {google.reviews.length > 0 && (
             <div className="g-reviews__list">
               {google.reviews.map((r) => (
-                <ReviewCard key={r.author + r.text} review={r} />
+                <ReviewCard key={r.author + r.text} review={r} fallbackUrl={google.profileUrl} />
               ))}
             </div>
           )}

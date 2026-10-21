@@ -14,6 +14,7 @@ type PlaceResponse = {
   googleMapsUri?: string;
   reviews?: {
     rating?: number;
+    googleMapsUri?: string;
     text?: { text?: string };
     originalText?: { text?: string };
     relativePublishTimeDescription?: string;
@@ -56,7 +57,7 @@ export async function getGoogleData(): Promise<GoogleData> {
         text: r.originalText?.text ?? r.text?.text ?? "",
         when: r.relativePublishTimeDescription,
         photo: r.authorAttribution?.photoUri,
-        url: r.authorAttribution?.uri,
+        url: r.googleMapsUri ?? r.authorAttribution?.uri,
       }))
       .filter((r) => r.text);
 

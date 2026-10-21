@@ -1823,7 +1823,7 @@ img {
   font-weight: 700;
 }
 
-.g-review figcaption {
+.g-review__who {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1834,9 +1834,115 @@ img {
   color: var(--muted);
 }
 
-.g-review blockquote {
+.g-review__text {
   margin: 0;
   color: var(--ink-2);
+}
+
+a.g-review {
+  color: inherit;
+}
+
+a.g-review:hover {
+  transform: translateY(-3px);
+  border-color: rgba(66, 133, 244, 0.5);
+  box-shadow: var(--shadow);
+}
+
+.g-review__more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+/* Google-style star breakdown */
+.g-bars {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 22px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.g-bars__row {
+  display: grid;
+  grid-template-columns: 28px 1fr 18px;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.g-bars__track {
+  height: 8px;
+  border-radius: 8px;
+  background: #ececec;
+  overflow: hidden;
+}
+
+.g-bars__track span {
+  display: block;
+  height: 100%;
+  border-radius: 8px;
+  background: #fbbc04;
+}
+
+.g-panel__body .g-bars {
+  margin: 0;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.g-panel__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px;
+  color: inherit;
+}
+
+.g-panel__score b {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.g-panel__score small {
+  color: var(--muted);
+}
+
+.g-panel__score:hover,
+.g-panel__cta:hover,
+.g-panel__body .g-bars:hover {
+  border-color: rgba(66, 133, 244, 0.5);
+  box-shadow: var(--shadow);
+}
+
+.g-panel__cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  color: inherit;
+}
+
+.g-panel__cta > span:nth-child(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.g-panel__cta small {
+  color: var(--muted);
+}
+
+.g-panel__cta > span:last-child {
+  font-size: 1.3rem;
+  color: #1a73e8;
 }
 
 @media (max-width: 900px) {
@@ -1955,12 +2061,6 @@ img {
   display: grid;
   gap: 14px;
   align-content: start;
-}
-
-.g-panel__empty {
-  color: var(--ink-2);
-  text-align: center;
-  padding: 24px 8px;
 }
 
 .g-panel__foot {

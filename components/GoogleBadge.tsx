@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GoogleLogo, ReviewCard, Stars } from "@/components/GoogleReviews";
+import { GoogleLogo, RatingBars, ReviewCard, Stars } from "@/components/GoogleReviews";
 import type { GoogleData } from "@/lib/google";
 
 // Floating "Google 5.0 ★★★★★" badge on the side of every page; opens a panel
@@ -59,13 +59,36 @@ export default function GoogleBadge({ data }: { data: GoogleData }) {
             </header>
 
             <div className="g-panel__body">
-              {data.reviews.length ? (
-                data.reviews.map((r) => <ReviewCard key={r.author + r.text} review={r} />)
-              ) : (
-                <p className="g-panel__empty">
-                  Rated {data.rating.toFixed(1)} out of 5 by our clients on Google. Read what they
-                  say on our Google Business Profile.
-                </p>
+              <a
+                href={data.profileUrl}
+                className="card g-panel__score"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>{data.rating.toFixed(1)}</b>
+                <Stars rating={data.rating} size={22} />
+                <small>
+                  {data.reviewCount} Google review{data.reviewCount === 1 ? "" : "s"}
+                </small>
+              </a>
+              <RatingBars data={data} />
+              {data.reviews.map((r) => (
+                <ReviewCard key={r.author + r.text} review={r} fallbackUrl={data.profileUrl} />
+              ))}
+              {data.reviews.length === 0 && (
+                <a
+                  href={data.profileUrl}
+                  className="card g-panel__cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GoogleLogo size={22} />
+                  <span>
+                    <strong>Read our {data.reviewCount} five-star reviews</strong>
+                    <small>See what clients say on Google Maps</small>
+                  </span>
+                  <span aria-hidden="true">→</span>
+                </a>
               )}
             </div>
 
