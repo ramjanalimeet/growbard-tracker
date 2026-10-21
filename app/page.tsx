@@ -215,6 +215,14 @@ export default function Home() {
               <a href={SITE.phoneHref} className="btn btn--outline-light btn--lg">
                 <Icon name="phone" size={18} /> Call Us
               </a>
+              <a
+                href={SITE.whatsappHref}
+                className="btn btn--whatsapp btn--lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name="whatsapp" size={20} /> WhatsApp
+              </a>
             </div>
           </div>
         </section>
@@ -253,6 +261,14 @@ export default function Home() {
                     <Icon name="phone" size={20} />
                   </span>
                   <a href={SITE.phoneHref}>{SITE.phone}</a>
+                </li>
+                <li>
+                  <span className="contact__icon contact__icon--whatsapp">
+                    <Icon name="whatsapp" size={22} />
+                  </span>
+                  <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
+                    WhatsApp: {SITE.whatsapp}
+                  </a>
                 </li>
                 <li>
                   <span className="contact__icon">
@@ -308,7 +324,12 @@ export default function Home() {
             <h4>Get in touch</h4>
             <ul>
               <li>
-                <a href={SITE.phoneHref}>{SITE.phone}</a>
+                <a href={SITE.phoneHref}>Call: {SITE.phone}</a>
+              </li>
+              <li>
+                <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
+                  WhatsApp: {SITE.whatsapp}
+                </a>
               </li>
               <li>
                 <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

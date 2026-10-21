@@ -5,8 +5,12 @@ export const SITE = {
   tagline: "Digital marketing that grows local businesses",
   url: "https://growbard.com",
   email: "hello@growbard.com",
-  phone: "+1 (555) 123-4567",
-  phoneHref: "tel:+15551234567",
+  phone: "+880 1839-295114",
+  phoneHref: "tel:+8801839295114",
+  whatsapp: "+880 1839-295114",
+  whatsappHref:
+    "https://wa.me/8801839295114?text=" +
+    encodeURIComponent("Hi Growbard, I'd like to know more about your services."),
   hours: "Mon – Fri, 9am – 6pm",
   // YouTube video ID for the hero video card (the part after "watch?v=").
   // Leave empty to show the animated dashboard preview instead.

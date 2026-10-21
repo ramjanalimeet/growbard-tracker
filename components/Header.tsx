@@ -75,9 +75,34 @@ export default function Header() {
         </div>
       </header>
 
-      <a href={SITE.phoneHref} className="call-fab" aria-label={`Call ${SITE.name}`}>
-        <Icon name="phone" size={24} />
-      </a>
+      <div className="fabs">
+        <a
+          href={SITE.whatsappHref}
+          className="fab fab--whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Chat with ${SITE.name} on WhatsApp`}
+        >
+          <Icon name="whatsapp" size={28} />
+        </a>
+        <a href={SITE.phoneHref} className="fab" aria-label={`Call ${SITE.name}`}>
+          <Icon name="phone" size={24} />
+        </a>
+      </div>
+
+      <div className="mobile-bar">
+        <a href={SITE.phoneHref} className="mobile-bar__btn mobile-bar__btn--call">
+          <Icon name="phone" size={20} /> Call Now
+        </a>
+        <a
+          href={SITE.whatsappHref}
+          className="mobile-bar__btn mobile-bar__btn--whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="whatsapp" size={22} /> WhatsApp
+        </a>
+      </div>
     </>
   );
 }
