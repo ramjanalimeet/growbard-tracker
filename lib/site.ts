@@ -32,6 +32,7 @@ export const NAV = [
   { label: "Why Us", href: "/why-us" },
   { label: "Pricing", href: "/pricing" },
   { label: "Reviews", href: "/reviews" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 

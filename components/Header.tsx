@@ -11,6 +11,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -36,7 +38,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={pathname === item.href ? "nav__active" : undefined}
+                className={isActive(item.href) ? "nav__active" : undefined}
                 aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
