@@ -66,12 +66,12 @@ export default function ContactForm() {
       </button>
       <p className="form__or">or</p>
       <a
-        href={SITE.whatsappQuoteHref}
+        href={SITE.whatsappHref}
         className="btn btn--whatsapp btn--block"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon name="whatsapp" size={20} /> Get a free quote on WhatsApp
+        <Icon name="whatsapp" size={20} /> Chat on WhatsApp
       </a>
       {sent && (
         <p className="form__note">

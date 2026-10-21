@@ -221,7 +221,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name="whatsapp" size={20} /> WhatsApp
+                <Icon name="whatsapp" size={20} /> Chat on WhatsApp
               </a>
             </div>
           </div>

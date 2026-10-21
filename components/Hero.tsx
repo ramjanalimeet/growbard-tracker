@@ -63,12 +63,12 @@ export default function Hero() {
 
           <div className="hero__actions">
             <a
-              href={SITE.whatsappQuoteHref}
+              href={SITE.whatsappHref}
               className="btn btn--whatsapp btn--xl"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon name="whatsapp" size={20} /> Get a free quote
+              <Icon name="whatsapp" size={20} /> Chat on WhatsApp
             </a>
             <a href={SITE.phoneHref} className="btn btn--white btn--xl">
               <Icon name="phone" size={18} /> Call {SITE.phone}

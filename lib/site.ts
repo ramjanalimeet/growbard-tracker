@@ -11,9 +11,6 @@ export const SITE = {
   whatsappHref:
     "https://wa.me/8801839295114?text=" +
     encodeURIComponent("Hi Growbard, I'd like to know more about your services."),
-  whatsappQuoteHref:
-    "https://wa.me/8801839295114?text=" +
-    encodeURIComponent("Hi Growbard, I'd like a free quote for my business."),
   hours: "Mon – Fri, 9am – 6pm",
   // YouTube video ID for the hero video card (the part after "watch?v=").
   // Leave empty to show the animated dashboard preview instead.
@@ -166,41 +163,43 @@ export type Package = {
 export const PACKAGES: Package[] = [
   {
     name: "Starter",
-    price: "$499",
+    price: "৳8,500",
     period: "/month",
-    description: "Get found locally and build a solid foundation.",
+    description: "Local SEO to get your business found on Google.",
     features: [
-      "Local SEO & Google Business Profile",
-      "Up to 20 citations",
-      "8 social media posts / month",
+      "Local SEO",
+      "Google Business Profile optimization",
+      "Citation building & review strategy",
+      "Local on-page SEO",
       "Monthly performance report",
     ],
   },
   {
     name: "Growth",
-    price: "$999",
+    price: "৳24,500",
     period: "/month",
-    description: "Our most popular plan for steady, predictable leads.",
+    description: "Local SEO, a professional website and Google Ads working together.",
     featured: true,
     features: [
-      "Everything in Starter",
+      "Local SEO",
+      "Website development",
+      "Website maintenance",
       "Google Ads management",
-      "16 social posts + Meta ads",
-      "2 new landing pages / month",
-      "Call & conversion tracking",
+      "Monthly performance report",
     ],
   },
   {
     name: "Dominate",
-    price: "$1,999",
+    price: "৳34,500",
     period: "/month",
-    description: "Own your market across every channel.",
+    description: "Every channel covered to own your local market.",
     features: [
-      "Everything in Growth",
-      "Custom website design & build",
-      "Multi-location Local SEO",
-      "Daily social content & reels",
-      "Dedicated account manager",
+      "Local SEO",
+      "Website development",
+      "Website maintenance",
+      "Google Ads management",
+      "Social media marketing",
+      "Monthly performance report",
     ],
   },
 ];
