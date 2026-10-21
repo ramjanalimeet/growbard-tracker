@@ -163,7 +163,7 @@ export type Package = {
 export const PACKAGES: Package[] = [
   {
     name: "Starter",
-    price: "৳8,500",
+    price: "৳10,500",
     period: "/month",
     description: "Local SEO to get your business found on Google.",
     features: [
