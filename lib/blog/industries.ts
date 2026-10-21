@@ -1,3 +1,4 @@
+import { FACT, SRC } from "@/lib/blog/sources";
 import type { PostData } from "@/lib/posts";
 
 export const INDUSTRY_POSTS: PostData[] = [
@@ -11,10 +12,12 @@ export const INDUSTRY_POSTS: PostData[] = [
     category: "Industries",
     icon: "home",
     date: "2026-10-06",
+    updated: "2026-10-21",
     body: [
       {
         p: "Real estate digital marketing in Bangladesh has changed how developers and agents find buyers. Most buyers now shortlist projects online, compare locations and prices, and only then call. Buyers living abroad often decide almost entirely online. If your projects aren't easy to find and trust online, you lose those buyers before the first call.",
       },
+      { p: FACT.internetUsers },
       { h2: "The real estate buyer journey" },
       {
         ol: [
@@ -66,6 +69,19 @@ export const INDUSTRY_POSTS: PostData[] = [
           "Not answering price questions, which makes buyers move on",
         ],
       },
+      {
+        table: {
+          caption: "Channels by buyer stage",
+          head: ["Buyer stage", "Best channels"],
+          rows: [
+            ["Discovering areas and projects", "Facebook and [YouTube video ads](/blog/youtube-ads-for-business-bangladesh)"],
+            ["Comparing projects", "Google search, your website, reviews"],
+            ["Ready to enquire", "Google Ads, [click to WhatsApp ads](/blog/click-to-whatsapp-ads)"],
+            ["Deciding", "Follow-up, site visits, retargeting"],
+          ],
+        },
+      },
+      { p: `Send every ad to a dedicated project [landing page](/blog/landing-page-design-service), not your home page.` },
       { h2: "Real estate marketing with Growbard" },
       {
         p: "We help [real estate developers and agents](/industries/real-estate) in [Dhaka](/locations/dhaka), [Chattogram](/locations/chattogram), [Sylhet](/locations/sylhet) and across Bangladesh with websites, local SEO, Google Ads and social media. See our [pricing](/pricing) or chat with us on WhatsApp.",
@@ -85,6 +101,9 @@ export const INDUSTRY_POSTS: PostData[] = [
         a: "Yes, portals add reach. But your own website and Google profile are assets you control and help buyers trust your brand.",
       },
     ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
+    ],
   },
   {
     slug: "dental-clinic-marketing-dhaka",
@@ -95,10 +114,12 @@ export const INDUSTRY_POSTS: PostData[] = [
     category: "Industries",
     icon: "tooth",
     date: "2026-09-22",
+    updated: "2026-10-21",
     body: [
       {
         p: "Dental clinic marketing in Dhaka is mostly about one moment: when someone searches \"dentist near me\" and picks a clinic from the top results. Winning that moment consistently fills your appointment book. Here's how to do it.",
       },
+      { p: FACT.googleShare },
       { h2: "1. Own Google Maps in your area" },
       {
         p: "Patients choose clinics that are close, well-reviewed and look professional. Optimize your Google Business Profile with the \"Dental clinic\" category, every treatment you offer, opening hours, clinic photos and doctor profiles. Post updates every week.",
@@ -150,6 +171,19 @@ export const INDUSTRY_POSTS: PostData[] = [
           "Slow replies to messages outside working hours",
         ],
       },
+      {
+        table: {
+          caption: "Treatments and the marketing that suits them",
+          head: ["Treatment", "Best channel"],
+          rows: [
+            ["Toothache / emergency", "Google Maps and call ads"],
+            ["Scaling and check-ups", "Google profile, reviews, reminders"],
+            ["Implants and braces", "Google Ads + treatment pages"],
+            ["Whitening and cosmetic", "Instagram and Facebook"],
+          ],
+        },
+      },
+      { p: `Growing reviews is the fastest win: see [how to get more Google reviews](/blog/how-to-get-more-google-reviews). For larger practices, read [SEO for clinics and hospitals](/blog/seo-for-clinics-and-hospitals-bangladesh).` },
       { h2: "Dental marketing with Growbard" },
       {
         p: "We help [dental clinics](/industries/dental-clinics) across [Dhaka](/locations/dhaka) and Bangladesh grow with [local SEO](/services/local-seo), websites and Google Ads. See our [pricing](/pricing) or message us on WhatsApp for a free audit of your clinic's Google profile.",
@@ -169,6 +203,9 @@ export const INDUSTRY_POSTS: PostData[] = [
         a: "We work with clinics across Dhaka, including Dhanmondi, Gulshan, Uttara, Mirpur and Mohammadpur, and in other districts.",
       },
     ],
+    sources: [
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+    ],
   },
   {
     slug: "interior-design-marketing-dhaka",
@@ -180,10 +217,12 @@ export const INDUSTRY_POSTS: PostData[] = [
     category: "Industries",
     icon: "sofa",
     date: "2026-09-01",
+    updated: "2026-10-21",
     body: [
       {
         p: "Good marketing for interior designers in Dhaka starts with one fact: clients hire with their eyes. Interior designers in Dhaka win clients with visuals and trust. Most clients browse Instagram and Google for weeks before contacting anyone, and they want to see a lot of finished work first. The right online marketing turns that browsing into consultation requests from clients with real budgets.",
       },
+      { p: FACT.facebookUsers },
       { h2: "1. Build a portfolio-first website" },
       {
         p: "Show complete projects, not just single photos: the brief, before photos, the design and the finished result. Organize work by type (apartments, offices, restaurants) so clients find what's relevant to them, and add a consultation request form on every project page.",
@@ -230,6 +269,7 @@ export const INDUSTRY_POSTS: PostData[] = [
           "No clear way to book a consultation",
         ],
       },
+      { p: `Get the most from Instagram with our [Instagram marketing plan](/blog/instagram-marketing-for-business-bangladesh), and use [Google Maps marketing](/blog/google-maps-marketing-service) to capture clients searching for designers nearby.` },
       { h2: "Interior design marketing with Growbard" },
       {
         p: "We help [interior design firms](/industries/interior-design) in [Dhaka](/locations/dhaka) and across Bangladesh with portfolio websites, [local SEO](/services/local-seo) and [social media marketing](/services/social-media). See our [pricing](/pricing) or chat with us on WhatsApp.",
@@ -249,6 +289,9 @@ export const INDUSTRY_POSTS: PostData[] = [
         a: "Yes. Separate pages and campaigns for office and commercial interiors help attract business clients.",
       },
     ],
+    sources: [
+      { label: "NapoleonCat: Social media users in Bangladesh", url: SRC.napoleoncat },
+    ],
   },
   {
     slug: "solar-company-marketing-bangladesh",
@@ -260,6 +303,7 @@ export const INDUSTRY_POSTS: PostData[] = [
     category: "Industries",
     icon: "sun",
     date: "2026-08-15",
+    updated: "2026-10-21",
     body: [
       {
         p: "Solar company marketing in Bangladesh is growing fast as more homes, businesses and factories look at rooftop solar to cut electricity costs. Buyers research carefully before committing, so the companies that explain clearly and show proof online win the best projects.",
@@ -311,6 +355,18 @@ export const INDUSTRY_POSTS: PostData[] = [
       },
       { h2: "Seasonal and policy changes" },
       { p: "Demand for solar can rise with power outages, electricity price changes and new policies. Keep your website and ads up to date with current information so you're ready when interest spikes." },
+      {
+        table: {
+          caption: "Audience, message and channel",
+          head: ["Audience", "Key message", "Best channel"],
+          rows: [
+            ["Homeowners", "Lower bills, backup power, warranty", "Facebook, Google Maps"],
+            ["Shops and offices", "Predictable costs, payback period", "Google Ads, website"],
+            ["Factories", "Scale, compliance, ROI", "Google Ads, LinkedIn, case studies"],
+          ],
+        },
+      },
+      { p: `Capture high-intent searches with [Google Ads lead generation](/blog/google-ads-lead-generation) and dedicated [landing pages](/blog/landing-page-design-service) for each segment.` },
       { h2: "Solar marketing with Growbard" },
       {
         p: "We help [solar installation companies](/industries/solar-installation) across Bangladesh with lead-focused websites, [SEO](/services/local-seo) and [Google Ads](/services/google-ads). See our [pricing](/pricing) or message us on WhatsApp.",
@@ -341,10 +397,12 @@ export const INDUSTRY_POSTS: PostData[] = [
     category: "Industries",
     icon: "cap",
     date: "2026-08-08",
+    updated: "2026-10-21",
     body: [
       {
         p: "Study-abroad consultancy marketing in Bangladesh is competitive, and families are careful. They research countries, universities and consultants for weeks, and they need to trust you before sharing documents and paying fees. The consultancies that grow are the ones that look credible online and answer questions clearly.",
       },
+      { p: FACT.socialUsers },
       { h2: "1. Country and university pages" },
       {
         p: "Create a page for each destination you serve (UK, Canada, Australia, USA, Malaysia and others) covering requirements, costs, intakes, scholarships and visa steps. These pages rank for searches like \"study in UK from Bangladesh\" and give your ads the right landing page.",
@@ -389,6 +447,18 @@ export const INDUSTRY_POSTS: PostData[] = [
           "Not tracking which campaigns bring students who actually enrol",
         ],
       },
+      {
+        table: {
+          caption: "Intake marketing calendar",
+          head: ["Timing", "Focus"],
+          rows: [
+            ["3–6 months before deadline", "Country guides, scholarships, IELTS tips"],
+            ["1–3 months before", "Seminars, counselling offers, lead ads"],
+            ["After offers", "Visa preparation, departure stories, referrals"],
+          ],
+        },
+      },
+      { p: `Students often prefer messaging: use [click to WhatsApp ads](/blog/click-to-whatsapp-ads) and keep your office visible with [Google Maps marketing](/blog/google-maps-marketing-service).` },
       { h2: "Study-abroad marketing with Growbard" },
       {
         p: "We help [study-abroad consultancies](/industries/study-abroad-consultancies) in [Dhaka](/locations/dhaka), [Sylhet](/locations/sylhet) and across Bangladesh with websites, [local SEO](/services/local-seo), [Google Ads](/services/google-ads) and social media. See our [pricing](/pricing) or chat with us on WhatsApp.",
@@ -407,6 +477,9 @@ export const INDUSTRY_POSTS: PostData[] = [
         q: "Are Facebook lead ads good for consultancies?",
         a: "Yes, they bring volume. Add a few qualifying questions, such as preferred country and IELTS score, to improve lead quality.",
       },
+    ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
     ],
   },
 ];

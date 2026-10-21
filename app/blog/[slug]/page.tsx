@@ -36,7 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...meta,
     keywords: [post.keyword],
-    openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date },
+    openGraph: {
+      ...meta.openGraph,
+      type: "article",
+      publishedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
+    },
   };
 }
 
@@ -57,7 +62,7 @@ export default async function PostPage({ params }: Props) {
     description: post.excerpt,
     keywords: post.keyword,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     image: absoluteUrl("/opengraph-image"),
     author: { "@type": "Organization", name: SITE.name, url: SITE.url },
     publisher: {
@@ -84,6 +89,14 @@ export default async function PostPage({ params }: Props) {
             <h1>{post.title}</h1>
             <p className="post-hero__meta">
               <time dateTime={post.date}>{formatDate(post.date)}</time>
+              {post.updated && post.updated !== post.date && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span>
+                    Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                  </span>
+                </>
+              )}
               <span aria-hidden="true">·</span>
               <span>{post.readMinutes} min read</span>
               <span aria-hidden="true">·</span>
@@ -113,6 +126,38 @@ export default async function PostPage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
+                ) : "table" in block ? (
+                  <div key={i} className="table-wrap">
+                    <table className="data-table">
+                      {block.table.caption && <caption>{block.table.caption}</caption>}
+                      <thead>
+                        <tr>
+                          {block.table.head.map((h) => (
+                            <th key={h} scope="col">
+                              {h}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {block.table.rows.map((row) => (
+                          <tr key={row.join("|")}>
+                            {row.map((cell, c) =>
+                              c === 0 ? (
+                                <th key={c} scope="row">
+                                  <RichText text={cell} />
+                                </th>
+                              ) : (
+                                <td key={c}>
+                                  <RichText text={cell} />
+                                </td>
+                              ),
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 ) : "ol" in block ? (
                   <ol key={i} className="steps">
                     {block.ol.map((item) => (
@@ -126,6 +171,21 @@ export default async function PostPage({ params }: Props) {
                     <RichText text={block.p} />
                   </p>
                 ),
+              )}
+
+              {post.sources && post.sources.length > 0 && (
+                <div className="post-sources">
+                  <h2 id="sources">Sources</h2>
+                  <ul>
+                    {post.sources.map((s) => (
+                      <li key={s.url}>
+                        <a href={s.url} target="_blank" rel="noopener noreferrer">
+                          {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
 
               <div className="post-end-cta">

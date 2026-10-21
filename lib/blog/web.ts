@@ -1,3 +1,4 @@
+import { FACT, PLAN_TABLE, SRC } from "@/lib/blog/sources";
 import type { PostData } from "@/lib/posts";
 
 export const WEB_POSTS: PostData[] = [
@@ -10,10 +11,12 @@ export const WEB_POSTS: PostData[] = [
     category: "Website Development",
     icon: "code",
     date: "2026-10-15",
+    updated: "2026-10-21",
     body: [
       {
         p: "Website development cost in Bangladesh ranges from a few thousand taka for a basic template to several lakh for a custom e-commerce or B2B platform. The right budget depends on what the website needs to do for your business. This guide explains the main price factors so you can compare quotes with confidence.",
       },
+      { p: FACT.subscriptions },
       { h2: "What affects website development cost?" },
       {
         ul: [
@@ -80,6 +83,20 @@ export const WEB_POSTS: PostData[] = [
         ],
       },
       { p: "Sharing the same brief with every developer makes quotes easy to compare. Also read [how to choose a website design company in Dhaka](/blog/website-design-company-in-dhaka)." },
+      {
+        table: {
+          caption: "Website types compared",
+          head: ["Type", "Typical pages", "Typical timeline", "Best for"],
+          rows: [
+            ["Simple business site", "4–6", "1–2 weeks", "New businesses needing a presence"],
+            ["Lead-generation site", "10–30+", "3–5 weeks", "Service businesses winning customers from Google"],
+            ["E-commerce store", "Catalogue-based", "3–8 weeks", "Brands selling online"],
+            ["B2B / exporter site", "10–25", "3–6 weeks", "Manufacturers and exporters"],
+          ],
+        },
+      },
+      { p: `Check any developer's work in [PageSpeed Insights](${SRC.pageSpeed}) and ask about [Core Web Vitals](${SRC.coreWebVitals}). After launch, budget for [website maintenance](/blog/website-maintenance-service-bangladesh), and if you're replacing an old site, read about [website redesign](/blog/website-redesign-service).` },
+      PLAN_TABLE,
       { h2: "Get a website that brings customers" },
       {
         p: "Our [website development service](/services/web-development) builds fast, mobile-first sites designed to turn visitors into calls and WhatsApp messages. Message us with what you need and we'll recommend the right option.",
@@ -99,6 +116,11 @@ export const WEB_POSTS: PostData[] = [
         a: "Yes. Updates, backups and security fixes keep your site fast and safe. Maintenance is included in Growbard's Growth and Dominate plans.",
       },
     ],
+    sources: [
+      { label: "BSS: BTRC internet subscriber data, May 2026", url: SRC.btrcViaBss },
+      { label: "PageSpeed Insights", url: SRC.pageSpeed },
+      { label: "web.dev: Core Web Vitals", url: SRC.coreWebVitals },
+    ],
   },
   {
     slug: "website-design-company-in-dhaka",
@@ -109,6 +131,7 @@ export const WEB_POSTS: PostData[] = [
     category: "Website Development",
     icon: "code",
     date: "2026-10-01",
+    updated: "2026-10-21",
     body: [
       {
         p: "Choosing a website design company in Dhaka is an important decision: your website is often the first impression customers get. A good company builds a site that looks professional, loads fast on mobile and turns visitors into enquiries. A bad one leaves you with a slow site you can't update.",
@@ -182,6 +205,7 @@ export const WEB_POSTS: PostData[] = [
           "Huge images and sliders that make the site slow on mobile data",
         ],
       },
+      { p: `Before you sign, test the company's own website in [PageSpeed Insights](${SRC.pageSpeed}) and ask whether they'll set up [Google Search Console](${SRC.searchConsole}) for you. See what [SEO-friendly website development](/blog/seo-friendly-website-development) should include.` },
       { h2: "Website design in Dhaka with Growbard" },
       {
         p: "We design and build lead-focused websites for businesses in [Dhaka](/locations/dhaka) and across Bangladesh, with maintenance and SEO included in our [Growth and Dominate plans](/pricing). Learn more about our [website development service](/services/web-development) or read our [website cost guide](/blog/website-development-cost-in-bangladesh).",
@@ -201,6 +225,10 @@ export const WEB_POSTS: PostData[] = [
         a: "Yes. We can build websites in English, Bangla or both, depending on who your customers are.",
       },
     ],
+    sources: [
+      { label: "PageSpeed Insights", url: SRC.pageSpeed },
+      { label: "Google Search Console", url: SRC.searchConsole },
+    ],
   },
   {
     slug: "ecommerce-website-development-bangladesh",
@@ -211,10 +239,12 @@ export const WEB_POSTS: PostData[] = [
     category: "Website Development",
     icon: "cart",
     date: "2026-09-17",
+    updated: "2026-10-21",
     body: [
       {
         p: "E-commerce website development in Bangladesh has become essential for brands that want to grow beyond Facebook selling. Your own online shop gives you control over your customers, your brand and your sales, and makes Google Ads and SEO far more effective.",
       },
+      { p: FACT.ecommerce },
       { h2: "Why sell on your own website, not just Facebook?" },
       {
         ul: [
@@ -278,6 +308,18 @@ export const WEB_POSTS: PostData[] = [
           "Prepare launch offers and retargeting ads.",
         ],
       },
+      {
+        table: {
+          caption: "E-commerce platform options",
+          head: ["Platform", "Pros", "Cons"],
+          rows: [
+            ["Hosted (e.g. Shopify)", "Fast launch, little maintenance", "Monthly fees, less flexibility"],
+            ["WooCommerce (WordPress)", "Flexible, many plugins", "Needs regular updates and good hosting"],
+            ["Custom-built", "Fully tailored and fast", "Higher upfront cost"],
+          ],
+        },
+      },
+      { p: `Drive your first sales with [Google Ads vs Facebook Ads](/blog/google-ads-vs-facebook-ads-bangladesh) and [click to WhatsApp ads](/blog/click-to-whatsapp-ads).` },
       { h2: "E-commerce development with Growbard" },
       {
         p: "We build fast online shops and market them with [Google Ads](/services/google-ads) and [social media](/services/social-media). See how we help [e-commerce brands](/industries/e-commerce) or check our [pricing](/pricing), then message us on WhatsApp to discuss your store.",
@@ -297,6 +339,10 @@ export const WEB_POSTS: PostData[] = [
         a: "Yes. Use Facebook and Instagram to reach customers and send them to your website to order. The two work best together.",
       },
     ],
+    sources: [
+      { label: "ECDB: E-commerce market in Bangladesh", url: SRC.ecdb },
+      { label: "CPD projection via Apparel Resources", url: SRC.cpdEcommerce },
+    ],
   },
   {
     slug: "website-for-manufacturers-exporters-bangladesh",
@@ -308,6 +354,7 @@ export const WEB_POSTS: PostData[] = [
     category: "Website Development",
     icon: "factory",
     date: "2026-09-03",
+    updated: "2026-10-21",
     body: [
       {
         p: "A website for manufacturers and exporters in Bangladesh has one main job: convince international buyers and sourcing agents that you're a reliable partner worth contacting. Before a buyer sends a request for quotation (RFQ), they almost always check your website.",
@@ -361,6 +408,20 @@ export const WEB_POSTS: PostData[] = [
       { p: "Short factory tour videos, photos of quality control steps, case studies of product development (where clients allow) and clear process pages showing how you go from sample to bulk production all help buyers feel confident before the first call." },
       { h2: "Measuring results" },
       { p: "Track RFQ form submissions, emails and WhatsApp contacts from the website, and note which pages buyers visited before contacting you. This shows which products and markets to focus on, and where to invest in [Google Ads](/blog/google-ads-agency-in-bangladesh) or content." },
+      {
+        table: {
+          caption: "Exporter website pages and what they answer",
+          head: ["Page", "Buyer question it answers"],
+          rows: [
+            ["Products / capabilities", "Can you make what I need?"],
+            ["Factory & capacity", "Can you handle my volume and deadlines?"],
+            ["Compliance", "Will you pass our audits?"],
+            ["About", "Who are you and how long have you been doing this?"],
+            ["Contact / RFQ", "How do I get a quote quickly?"],
+          ],
+        },
+      },
+      { p: `Follow Google's [SEO Starter Guide](${SRC.seoStarter}) for page titles and structure, and support your site with [LinkedIn marketing for B2B companies](/blog/linkedin-marketing-for-b2b-bangladesh).` },
       { h2: "Websites for exporters with Growbard" },
       {
         p: "We build professional B2B websites for [manufacturers and exporters](/industries/manufacturers-exporters) in [Gazipur](/locations/gazipur), [Narayanganj](/locations/narayanganj), [Chattogram](/locations/chattogram) and across Bangladesh. Learn about our [website development service](/services/web-development) or message us on WhatsApp.",
@@ -380,6 +441,9 @@ export const WEB_POSTS: PostData[] = [
         a: "Combine SEO for your product categories with Google Ads targeted at your export markets, and promote your site on LinkedIn and at trade fairs.",
       },
     ],
+    sources: [
+      { label: "Google: SEO Starter Guide", url: SRC.seoStarter },
+    ],
   },
   {
     slug: "lead-generation-for-small-business-bangladesh",
@@ -391,10 +455,12 @@ export const WEB_POSTS: PostData[] = [
     category: "Digital Marketing",
     icon: "rocket",
     date: "2026-08-22",
+    updated: "2026-10-21",
     body: [
       {
         p: "Lead generation for a small business in Bangladesh means getting a steady stream of people who call, message or visit because they're interested in buying. You don't need every channel. You need the right two or three, done consistently.",
       },
+      { p: FACT.internetUsers },
       { h2: "1. Google Business Profile" },
       {
         p: "Free and powerful. A complete profile with reviews puts you on Google Maps when people nearby search for your service. For most local businesses this is the best place to start. See our [Google Business Profile checklist](/blog/google-business-profile-checklist).",
@@ -453,6 +519,21 @@ export const WEB_POSTS: PostData[] = [
       },
       { h2: "Budgeting for lead generation" },
       { p: "Start by working out what a new customer is worth to you and how many leads you need to win one. That tells you how much you can spend per lead and still make a profit. Begin with one or two channels, measure for a month, then scale what works." },
+      {
+        table: {
+          caption: "Lead channels compared",
+          head: ["Channel", "Speed", "Ongoing cost", "Lead intent"],
+          rows: [
+            ["Google Business Profile", "Weeks", "Free (time)", "High"],
+            ["Local SEO", "Months", "Monthly service", "High"],
+            ["Google Ads", "Days", "Ad budget + management", "High"],
+            ["Facebook / Instagram ads", "Days", "Ad budget + management", "Medium"],
+            ["WhatsApp ads", "Days", "Ad budget", "Medium–high"],
+            ["Referrals and reviews", "Ongoing", "Free (time)", "Very high"],
+          ],
+        },
+      },
+      { p: `Guides for each channel: [Google Ads lead generation](/blog/google-ads-lead-generation), [click to WhatsApp ads](/blog/click-to-whatsapp-ads) and [how to get more Google reviews](/blog/how-to-get-more-google-reviews).` },
       { h2: "Lead generation with Growbard" },
       {
         p: "We combine [local SEO](/services/local-seo), [websites](/services/web-development), [Google Ads](/services/google-ads) and [social media](/services/social-media) into one plan focused on leads. See our [pricing](/pricing) or chat with us on WhatsApp.",
@@ -471,6 +552,9 @@ export const WEB_POSTS: PostData[] = [
         q: "How do I know which channel works?",
         a: "Use call tracking, WhatsApp click tracking and form tracking, and ask every new customer how they found you.",
       },
+    ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
     ],
   },
 ];

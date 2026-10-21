@@ -16,8 +16,11 @@ npm run build
 
 All copy (services, packages, reviews, FAQ, contact details) lives in `lib/site.ts`.
 Locations are in `lib/locations.ts`, industries in `lib/industries.ts` and blog
-posts in `lib/blog/*.ts` (each with a target `keyword`, optional `metaTitle` and
-`faqs`; inline links are written as `[label](/path)`); each entry gets its own page, is added to the sitemap
+posts in `lib/blog/*.ts` (each with a target `keyword`, optional `metaTitle`,
+`faqs`, `sources` and `updated` date; blocks include headings, lists and tables,
+and inline links are written as `[label](/path)`). Statistics and external
+references live in `lib/blog/sources.ts` so every article cites the same figures;
+update them there when new reports come out. each entry gets its own page, is added to the sitemap
 and gets SEO metadata and structured data automatically.
 
 Set `SITE.url` in `lib/site.ts` to the real domain before launch: canonical

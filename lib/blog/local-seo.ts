@@ -1,3 +1,4 @@
+import { FACT, PLAN_TABLE, SRC } from "@/lib/blog/sources";
 import type { PostData } from "@/lib/posts";
 
 export const LOCAL_POSTS: PostData[] = [
@@ -11,10 +12,12 @@ export const LOCAL_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-10-17",
+    updated: "2026-10-21",
     body: [
       {
         p: "Local SEO services in Bangladesh help businesses appear on Google Maps and in local search results when nearby customers search for what they sell. If you run a clinic, shop, agency, showroom or service business, local SEO is usually the most cost-effective way to get steady calls and WhatsApp messages from people who are ready to buy.",
       },
+      { p: FACT.googleShare },
       {
         p: "This guide explains what a proper local SEO service includes, what it should cost, how long it takes and the questions to ask before you hire anyone.",
       },
@@ -85,6 +88,9 @@ export const LOCAL_POSTS: PostData[] = [
       },
       { h2: "Local SEO vs Google Ads: which first?" },
       { p: "Google Ads brings leads within days but stops the moment you stop paying. Local SEO takes longer but keeps bringing free leads for years. Many businesses start both at once: ads for immediate calls while local SEO builds long-term visibility. Our [Growth plan](/pricing) combines both." },
+      { h2: "Growbard plans at a glance" },
+      PLAN_TABLE,
+      { p: `Not sure where you stand? Start with a free [local SEO audit](/blog/local-seo-audit), or read how our [Google Maps marketing service](/blog/google-maps-marketing-service) works.` },
       { h2: "How Growbard can help" },
       {
         p: "We handle every part of [local SEO](/services/local-seo) for businesses across Bangladesh, from [Dhaka](/locations/dhaka) to [Sylhet](/locations/sylhet), and report on the results that matter: calls, messages and bookings. Chat with us on WhatsApp for a free audit of your Google presence.",
@@ -104,6 +110,10 @@ export const LOCAL_POSTS: PostData[] = [
         a: "Yes. Service-area businesses that visit customers can set up their Google Business Profile with service areas instead of a public address.",
       },
     ],
+    sources: [
+      { label: "Google: How to improve your local ranking", url: SRC.gbpRanking },
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+    ],
   },
   {
     slug: "seo-agency-in-dhaka",
@@ -114,10 +124,12 @@ export const LOCAL_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-10-10",
+    updated: "2026-10-21",
     body: [
       {
         p: "Choosing an SEO agency in Dhaka can be confusing. There are hundreds of agencies and freelancers, and most of them promise first-page rankings. This checklist helps you compare them on what actually matters: whether they can bring your business more customers.",
       },
+      { p: FACT.internetUsers },
       { h2: "1. Start with your goal, not keywords" },
       {
         p: "A good SEO agency asks about your business before it talks about keywords: which services make you the most money, which areas you serve and what a lead is worth to you. If the first conversation is only about \"ranking for 50 keywords\", be careful.",
@@ -178,6 +190,20 @@ export const LOCAL_POSTS: PostData[] = [
         ],
       },
       { p: "With this ready, a good agency can start working from week one instead of spending a month gathering information. If you're still comparing options, our guide on [choosing a digital marketing agency in Bangladesh](/blog/how-to-choose-digital-marketing-agency-bangladesh) covers the wider picture." },
+      {
+        table: {
+          caption: "Green flags vs red flags",
+          head: ["Green flag", "Red flag"],
+          rows: [
+            ["Asks about your services, areas and margins", "Talks only about keyword counts"],
+            ["Works on your Google Business Profile and reviews", "Only sells backlinks"],
+            ["Reports calls and leads", "Reports rankings only"],
+            ["You own every account", "Keeps accounts in their name"],
+            ["Follows [Google's SEO guidance](${SRC.seoStarter})", "Guarantees #1 rankings"],
+          ],
+        },
+      },
+      { p: `Ask any agency to start with a [local SEO audit](/blog/local-seo-audit) so you can see their thinking before you commit.` },
       { h2: "Work with a Dhaka SEO partner focused on leads" },
       {
         p: "Growbard is a Dhaka-based growth partner. We combine [local SEO](/services/local-seo), [website development](/services/web-development) and [Google Ads](/services/google-ads) so your business shows up wherever customers search. See our [Dhaka page](/locations/dhaka) or message us on WhatsApp for a free audit.",
@@ -197,6 +223,10 @@ export const LOCAL_POSTS: PostData[] = [
         a: "No. Google doesn't allow anyone to guarantee rankings. A trustworthy agency explains its plan and reports progress honestly.",
       },
     ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
+      { label: "Google: SEO Starter Guide", url: SRC.seoStarter },
+    ],
   },
   {
     slug: "google-business-profile-optimization-service",
@@ -207,10 +237,12 @@ export const LOCAL_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-09-26",
+    updated: "2026-10-21",
     body: [
       {
         p: "A Google Business Profile optimization service sets up and manages your business listing on Google Search and Maps so it shows up for more local searches and turns more viewers into calls. For many local businesses, the Google profile brings more enquiries than the website.",
       },
+      { p: `Your profile is free to create at [Google Business Profile](${SRC.gbpHome}). Google explains how listings are ranked in its [local ranking help article](${SRC.gbpRanking}).` },
       { h2: "Why your Google Business Profile matters" },
       {
         p: "When someone searches for a service near them, Google shows business profiles first: name, rating, photos, hours and a call button. Customers often decide right there, without visiting any website. A complete, active profile with strong reviews wins those decisions.",
@@ -258,6 +290,7 @@ export const LOCAL_POSTS: PostData[] = [
       { p: "These numbers are visible in your profile's Performance section. A good optimization service reviews them with you every month." },
       { h2: "How often should a profile be updated?" },
       { p: "Post at least once a week, add new photos every month, check hours before every public holiday and respond to reviews within a day or two. Small, regular activity tells Google and customers that your business is active." },
+      { p: `Reviews are the hardest part to build. Our guide on [how to get more Google reviews](/blog/how-to-get-more-google-reviews) gives you templates you can use today.` },
       { h2: "Get your profile optimized" },
       {
         p: "Google Business Profile optimization is included in every Growbard plan, starting with [Starter at ৳10,500/month](/pricing). It's the core of our [local SEO service](/services/local-seo). Want to see the gaps in your profile? Read our [free checklist](/blog/google-business-profile-checklist) or send us your profile link on WhatsApp.",
@@ -277,6 +310,11 @@ export const LOCAL_POSTS: PostData[] = [
         a: "We can help find the cause and prepare a reinstatement request, but Google makes the final decision.",
       },
     ],
+    sources: [
+      { label: "Google Business Profile", url: SRC.gbpHome },
+      { label: "Google: How to improve your local ranking", url: SRC.gbpRanking },
+      { label: "Google Business Profile guidelines", url: SRC.gbpGuidelines },
+    ],
   },
   {
     slug: "seo-services-in-chattogram",
@@ -287,10 +325,12 @@ export const LOCAL_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-09-12",
+    updated: "2026-10-21",
     body: [
       {
         p: "SEO services in Chattogram help businesses in the port city appear when customers search on Google for products and services nearby. As Bangladesh's main trade hub, Chattogram has a large, busy market, and more buyers than ever start their search on their phone.",
       },
+      { p: FACT.internetUsers },
       { h2: "Why SEO matters for Chattogram businesses" },
       {
         p: "Whether you run a clinic in Panchlaish, a showroom on CDA Avenue, a logistics company near the port or a restaurant in GEC, customers are searching for you on Google. If you're not on the first page or in the Map Pack, those customers go to a competitor.",
@@ -340,6 +380,19 @@ export const LOCAL_POSTS: PostData[] = [
       },
       { h2: "Area pages for Chattogram neighbourhoods" },
       { p: "If you serve several parts of the city, such as Agrabad, Nasirabad, Halishahar or Chawkbazar, a short page for each area with relevant details can help you appear for neighbourhood searches. Keep each page genuinely useful: mention the services you provide there, directions, and examples of work in that area." },
+      {
+        table: {
+          caption: "Where to start, by business type",
+          head: ["Business type", "First priority"],
+          rows: [
+            ["Clinic or diagnostic centre", "Google profile + doctor and test pages"],
+            ["Showroom or shop", "Google profile + reviews + product category pages"],
+            ["Logistics or exporter", "B2B website + Google Ads for export markets"],
+            ["Hotel or restaurant", "Google profile photos + reviews + booking page"],
+          ],
+        },
+      },
+      { p: `Several branches across the city? Read our guide to [multi-location SEO](/blog/multi-location-seo-bangladesh).` },
       { h2: "SEO in Chattogram with Growbard" },
       {
         p: "We help businesses across [Chattogram](/locations/chattogram), [Cumilla](/locations/cumilla) and [Cox's Bazar](/locations/coxs-bazar) grow with [local SEO](/services/local-seo), websites and Google Ads. Plans start at ৳10,500 per month. Message us on WhatsApp for a free audit.",
@@ -359,6 +412,9 @@ export const LOCAL_POSTS: PostData[] = [
         a: "Growbard's Local SEO plan is ৳10,500 per month. Plans with a website and Google Ads start at ৳24,500 per month.",
       },
     ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
+    ],
   },
   {
     slug: "digital-marketing-agency-in-sylhet",
@@ -370,10 +426,12 @@ export const LOCAL_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-08-29",
+    updated: "2026-10-21",
     body: [
       {
         p: "A digital marketing agency in Sylhet helps local businesses reach customers on Google, Facebook and Instagram, and often beyond Bangladesh too. Sylhet's large UK diaspora means many buyers of property, education services and gifts research from abroad before they ever visit.",
       },
+      { p: FACT.socialUsers },
       { h2: "What makes marketing in Sylhet different" },
       {
         ul: [
@@ -416,6 +474,19 @@ export const LOCAL_POSTS: PostData[] = [
       { p: "Instagram content, Google Maps visibility and delivery-focused ads help restaurants and gift shops reach both locals and visitors." },
       { h2: "Bangla, English or both?" },
       { p: "Local customers may search and read in Bangla, while diaspora audiences often prefer English. Many Sylhet businesses do best with an English website, Bangla social media content and ads in both languages. Choose based on who your buyers are." },
+      {
+        table: {
+          caption: "Best channels by Sylhet industry",
+          head: ["Industry", "Main channels"],
+          rows: [
+            ["Real estate", "Google Ads, Facebook video, diaspora targeting"],
+            ["Study-abroad", "Country pages, Facebook lead ads, seminars"],
+            ["Hotels and tourism", "Google profile, reviews, Instagram"],
+            ["Restaurants and gifts", "Instagram, Google Maps, delivery ads"],
+          ],
+        },
+      },
+      { p: `Want to reach buyers in the UK? See [click to WhatsApp ads](/blog/click-to-whatsapp-ads), which make it easy for diaspora customers to contact you across time zones.` },
       { h2: "Growbard in Sylhet" },
       {
         p: "We help businesses across [Sylhet](/locations/sylhet), [Moulvibazar](/locations/moulvibazar), [Habiganj](/locations/habiganj) and [Sunamganj](/locations/sunamganj) with [local SEO](/services/local-seo), websites, Google Ads and [social media marketing](/services/social-media). See our [pricing](/pricing) or chat with us on WhatsApp.",
@@ -434,6 +505,9 @@ export const LOCAL_POSTS: PostData[] = [
         q: "Do you work with tourism businesses in Sylhet division?",
         a: "Yes. Hotels, resorts and tour operators benefit from strong Google profiles, reviews and booking-focused websites.",
       },
+    ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
     ],
   },
 ];

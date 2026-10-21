@@ -1,3 +1,4 @@
+import { FACT, PLAN_TABLE, SRC } from "@/lib/blog/sources";
 import type { PostData } from "@/lib/posts";
 
 export const ADS_POSTS: PostData[] = [
@@ -10,10 +11,12 @@ export const ADS_POSTS: PostData[] = [
     category: "Google Ads",
     icon: "ads",
     date: "2026-10-13",
+    updated: "2026-10-21",
     body: [
       {
         p: "A Google Ads agency in Bangladesh plans, launches and manages your ads on Google so you get more leads for less money. Done well, Google Ads puts your business in front of people at the exact moment they search for what you sell. Done badly, it burns through your budget with clicks that never turn into customers.",
       },
+      { p: FACT.googleShare },
       { h2: "What a Google Ads agency does" },
       {
         ul: [
@@ -71,6 +74,7 @@ export const ADS_POSTS: PostData[] = [
       },
       { h2: "What makes campaigns profitable" },
       { p: "Profitable Google Ads come from tight targeting, honest tracking and landing pages that match the ad. An agency that only adjusts bids without improving the page visitors land on leaves money on the table. That's why we build and maintain [websites](/services/web-development) as part of the same plan." },
+      { p: `Good agencies follow Google's own advice on [Quality Score](${SRC.adsQualityScore}) and [negative keywords](${SRC.adsNegativeKeywords}). Before hiring, run our [Google Ads audit checklist](/blog/google-ads-audit-checklist) on your current account, and read when [Performance Max](/blog/performance-max-for-local-business) makes sense.` },
       { h2: "Google Ads management with Growbard" },
       {
         p: "Google Ads management is included in our [Growth plan (৳24,500/month)](/pricing), together with a website, maintenance and Local SEO, so your ads have a fast landing page and your organic rankings grow at the same time. Learn more about our [Google Ads service](/services/google-ads) or message us on WhatsApp.",
@@ -90,6 +94,11 @@ export const ADS_POSTS: PostData[] = [
         a: "You should. A good agency works inside an account that belongs to your business, so you keep all data if you change agencies.",
       },
     ],
+    sources: [
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+      { label: "Google Ads Help: About Quality Score", url: SRC.adsQualityScore },
+      { label: "Google Ads Help: About negative keywords", url: SRC.adsNegativeKeywords },
+    ],
   },
   {
     slug: "google-ads-cost-in-bangladesh",
@@ -100,10 +109,12 @@ export const ADS_POSTS: PostData[] = [
     category: "Google Ads",
     icon: "ads",
     date: "2026-09-29",
+    updated: "2026-10-21",
     body: [
       {
         p: "Google Ads cost in Bangladesh depends on what you sell, where you advertise and how competitive your keywords are. There's no fixed price: you set a daily budget and pay each time someone clicks your ad. The real question isn't \"how much does a click cost\" but \"how much does a customer cost\".",
       },
+      { p: FACT.googleShare },
       { h2: "How Google Ads pricing works" },
       {
         p: "Google runs an auction every time someone searches. Your position and cost per click depend on your bid and the quality of your ad and landing page. Better, more relevant ads can pay less per click than competitors with higher bids.",
@@ -155,6 +166,20 @@ export const ADS_POSTS: PostData[] = [
           "Ads running at night when no one answers the phone",
         ],
       },
+      {
+        table: {
+          caption: "Worked example: estimating a monthly budget",
+          head: ["Step", "Example figure"],
+          rows: [
+            ["Leads wanted per month", "30"],
+            ["Landing page conversion rate", "10% (1 in 10 visitors)"],
+            ["Clicks needed", "300"],
+            ["Average cost per click (your area)", "Check in Keyword Planner"],
+            ["Monthly budget", "Clicks needed × average CPC"],
+          ],
+        },
+      },
+      { p: `Your [Quality Score](${SRC.adsQualityScore}) affects what you pay per click, so relevant ads and [landing pages](/blog/landing-page-design-service) directly lower costs.` },
       { h2: "Management costs" },
       {
         p: "If you hire an agency, add its management fee to your ad budget. At Growbard, Google Ads management is included in our [Growth plan at ৳24,500/month](/pricing), along with a website and Local SEO. Read [how to stop wasting your Google Ads budget](/blog/google-ads-for-local-businesses) or see our [Google Ads service](/services/google-ads).",
@@ -174,6 +199,10 @@ export const ADS_POSTS: PostData[] = [
         a: "Google Ads reaches people actively searching, so leads are often higher intent. Facebook ads are great for reach and demand creation. Many businesses use both.",
       },
     ],
+    sources: [
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+      { label: "Google Ads Help: About Quality Score", url: SRC.adsQualityScore },
+    ],
   },
   {
     slug: "social-media-marketing-agency-in-dhaka",
@@ -184,10 +213,12 @@ export const ADS_POSTS: PostData[] = [
     category: "Social Media Marketing",
     icon: "social",
     date: "2026-09-08",
+    updated: "2026-10-21",
     body: [
       {
         p: "A social media marketing agency in Dhaka manages your brand on Facebook, Instagram and other platforms: planning content, designing posts, running ads and replying to your audience. The goal isn't just likes. It's turning followers into enquiries and sales.",
       },
+      { p: FACT.socialUsers },
       { h2: "What a social media agency should deliver" },
       {
         ul: [
@@ -243,6 +274,19 @@ export const ADS_POSTS: PostData[] = [
       },
       { h2: "Common mistakes" },
       { p: "Posting without a plan, using only stock images, boosting posts for likes instead of messages, and ignoring comments are the most common reasons social media doesn't bring business. A clear plan and quick replies fix most of them. For paid campaigns, see our guide to [Facebook ads for local businesses](/blog/facebook-ads-for-local-business-bangladesh)." },
+      {
+        table: {
+          caption: "Organic content vs paid ads",
+          head: ["", "Organic content", "Paid ads"],
+          rows: [
+            ["Reaches", "Existing followers", "New people in your target area"],
+            ["Cost", "Time and creative", "Ad budget + management"],
+            ["Best for", "Trust and loyalty", "New leads and sales"],
+            ["Speed", "Slow, builds over time", "Fast"],
+          ],
+        },
+      },
+      { p: `Compare what's included with our guide to [social media management packages](/blog/social-media-management-packages-bangladesh) and [Facebook page management](/blog/facebook-page-management-service).` },
       { h2: "Social media marketing with Growbard" },
       {
         p: "[Social media marketing](/services/social-media) is included in our [Dominate plan (৳34,500/month)](/pricing), together with Local SEO, website development and Google Ads, so all your marketing works as one. Chat with us on WhatsApp to discuss your brand.",
@@ -262,6 +306,9 @@ export const ADS_POSTS: PostData[] = [
         a: "Yes, when content and ads are built around clear offers and easy ways to contact you, such as click-to-WhatsApp ads.",
       },
     ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
+    ],
   },
   {
     slug: "facebook-ads-for-local-business-bangladesh",
@@ -273,10 +320,12 @@ export const ADS_POSTS: PostData[] = [
     category: "Social Media Marketing",
     icon: "social",
     date: "2026-08-25",
+    updated: "2026-10-21",
     body: [
       {
         p: "Facebook ads for a local business in Bangladesh can bring a steady flow of messages and customers when they're set up correctly. The most common mistake is boosting posts for likes. Instead, choose the right objective, target the right area and make it easy to contact you.",
       },
+      { p: FACT.facebookUsers },
       { h2: "Choose the right objective" },
       {
         ul: [
@@ -329,6 +378,7 @@ export const ADS_POSTS: PostData[] = [
           "Running ads without anyone available to reply",
         ],
       },
+      { p: `Set up campaigns in [Meta Ads Manager](${SRC.metaAdsManager}) rather than the boost button. For messaging ads, connect the [WhatsApp Business app](${SRC.whatsappBusiness}) and read our guide to [click to WhatsApp ads](/blog/click-to-whatsapp-ads). Not sure whether to start here or on Google? See [Google Ads vs Facebook Ads](/blog/google-ads-vs-facebook-ads-bangladesh).` },
       { h2: "Facebook ads with Growbard" },
       {
         p: "We plan, create and manage Meta ad campaigns as part of our [social media marketing service](/services/social-media). See our [pricing](/pricing) or message us on WhatsApp.",
@@ -348,6 +398,11 @@ export const ADS_POSTS: PostData[] = [
         a: "Yes. Click-to-WhatsApp ads open a chat with your business number, which works very well for local services in Bangladesh.",
       },
     ],
+    sources: [
+      { label: "NapoleonCat: Social media users in Bangladesh", url: SRC.napoleoncat },
+      { label: "Meta Ads Manager", url: SRC.metaAdsManager },
+      { label: "WhatsApp Business", url: SRC.whatsappBusiness },
+    ],
   },
   {
     slug: "how-to-choose-digital-marketing-agency-bangladesh",
@@ -358,10 +413,13 @@ export const ADS_POSTS: PostData[] = [
     category: "Digital Marketing",
     icon: "rocket",
     date: "2026-08-18",
+    updated: "2026-10-21",
     body: [
       {
         p: "Choosing a digital marketing agency in Bangladesh is one of the most important growth decisions a business makes. The right agency brings steady leads and sales. The wrong one costs months and money. This guide shows you what to look for.",
       },
+      { p: FACT.internetUsers },
+      { p: FACT.googleShare },
       { h2: "Decide what you need" },
       {
         ul: [
@@ -427,6 +485,8 @@ export const ADS_POSTS: PostData[] = [
       },
       { h2: "Making the first 90 days count" },
       { p: "Agree on a small set of goals, such as more calls from Google Maps or a lower cost per lead, and review them monthly. Give the agency fast access to accounts and quick feedback on content. The best results come from a partnership where both sides share information openly." },
+      { h2: "Growbard plans at a glance" },
+      PLAN_TABLE,
       { h2: "Why businesses choose Growbard" },
       {
         p: "Growbard is a growth partner for businesses across Bangladesh. We bring [local SEO](/services/local-seo), [website development](/services/web-development), [Google Ads](/services/google-ads) and [social media marketing](/services/social-media) together under one team and one monthly report. Read more [about us](/about) or chat on WhatsApp for a free audit.",
@@ -445,6 +505,10 @@ export const ADS_POSTS: PostData[] = [
         q: "How long before I see results?",
         a: "Ads can bring leads within days. SEO and Google Maps usually take 2–6 months to build strong, lasting results.",
       },
+    ],
+    sources: [
+      { label: "DataReportal: Digital 2026 Bangladesh", url: SRC.datareportal },
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
     ],
   },
 ];

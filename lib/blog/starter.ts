@@ -1,3 +1,4 @@
+import { FACT, SRC } from "@/lib/blog/sources";
 import type { PostData } from "@/lib/posts";
 
 // The first five articles.
@@ -11,10 +12,12 @@ export const STARTER_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-10-20",
+    updated: "2026-10-21",
     body: [
       {
         p: "If you want to rank in the Google Map Pack in Dhaka, you first need to know how it works. Search for \"dentist near me\" or \"AC repair Mirpur\" and Google shows a map with three businesses under it. This is the Map Pack, and for most local searches it gets more clicks than everything below it. If your business isn't in those three spots, most customers searching for you will never see you.",
       },
+      { p: FACT.googleShare },
       {
         p: "Google ranks businesses in the Map Pack on three things: relevance, distance and prominence. You can't move your shop closer to every customer, but you can work on the other two.",
       },
@@ -46,6 +49,20 @@ export const STARTER_POSTS: PostData[] = [
       {
         p: "Profiles that are updated regularly tend to perform better. Post updates or offers every week, add new photos of your work, keep your opening hours correct (including holidays), and answer questions people ask on your profile.",
       },
+      { h2: "What Google itself says" },
+      { p: `Google confirms that local results are based on [relevance, distance and prominence](${SRC.gbpRanking}), and that keeping your profile complete and accurate, collecting reviews and responding to them all help. Avoid shortcuts that break the [Business Profile guidelines](${SRC.gbpGuidelines}).` },
+      {
+        table: {
+          caption: "Map Pack ranking factors at a glance",
+          head: ["Factor", "You can influence it?", "Main actions"],
+          rows: [
+            ["Relevance", "Yes", "Categories, services, description, website service pages"],
+            ["Distance", "Partly", "Accurate address or service areas, area pages"],
+            ["Prominence", "Yes", "[Reviews](/blog/how-to-get-more-google-reviews), citations, links, regular activity"],
+          ],
+        },
+      },
+      { p: `Want this done for you? Our [Google Maps marketing service](/blog/google-maps-marketing-service) covers all three, or start with a free [local SEO audit](/blog/local-seo-audit).` },
       { h2: "How long does it take?" },
       {
         p: "In less competitive areas, a well-optimized profile can start moving within a few weeks. In busy categories in central Dhaka it usually takes a few months of steady work on reviews, citations and content. The businesses that win are the ones that keep at it every month.",
@@ -65,6 +82,11 @@ export const STARTER_POSTS: PostData[] = [
         a: "Ads can appear on Google Maps, but the organic Map Pack can't be bought. It's earned through relevance, distance and prominence.",
       },
     ],
+    sources: [
+      { label: "Google: How to improve your local ranking", url: SRC.gbpRanking },
+      { label: "Google Business Profile guidelines", url: SRC.gbpGuidelines },
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+    ],
   },
   {
     slug: "google-business-profile-checklist",
@@ -75,10 +97,12 @@ export const STARTER_POSTS: PostData[] = [
     category: "Local SEO",
     icon: "pin",
     date: "2026-10-14",
+    updated: "2026-10-21",
     body: [
       {
         p: "This Google Business Profile checklist covers everything your listing needs. Your Google Business Profile is often the first thing a customer sees, before your website or Facebook page. Google also favours complete, accurate profiles in local results. Go through this list and fix anything that's missing.",
       },
+      { p: `You can manage your profile for free at [Google Business Profile](${SRC.gbpHome}). Everything below follows [Google's own guidelines](${SRC.gbpGuidelines}), so it's safe for your listing.` },
       { h2: "The checklist" },
       {
         ul: [
@@ -96,6 +120,21 @@ export const STARTER_POSTS: PostData[] = [
           "Replies to every review and every question.",
         ],
       },
+      {
+        table: {
+          caption: "Which checklist items affect what",
+          head: ["Item", "Helps rankings", "Helps customers choose you"],
+          rows: [
+            ["Categories and services", "Yes", "Yes"],
+            ["Reviews and replies", "Yes", "Yes"],
+            ["Photos", "Indirectly", "Yes"],
+            ["Posts", "Indirectly", "Yes"],
+            ["Accurate hours", "Indirectly", "Yes"],
+          ],
+        },
+      },
+      { p: `Need more reviews? Follow our guide on [how to get more Google reviews](/blog/how-to-get-more-google-reviews). Prefer to hand it over? See our [Google Business Profile optimization service](/blog/google-business-profile-optimization-service).` },
+      { p: `Want a professional review of your profile? Ask for a free [local SEO audit](/blog/local-seo-audit), or see how our [Local SEO service](/services/local-seo) keeps profiles active every month.` },
       { h2: "Keep it up to date" },
       {
         p: "A profile is not a one-time job. Set a weekly reminder to add a post and a few new photos, and check your hours before every holiday. Small, regular updates keep your profile fresh in Google's eyes and in your customers'.",
@@ -115,6 +154,10 @@ export const STARTER_POSTS: PostData[] = [
         a: "There's no fixed number, but aim for at least 10 good photos and keep adding new ones every month.",
       },
     ],
+    sources: [
+      { label: "Google Business Profile", url: SRC.gbpHome },
+      { label: "Google Business Profile guidelines", url: SRC.gbpGuidelines },
+    ],
   },
   {
     slug: "do-you-need-a-website-if-you-have-facebook",
@@ -125,10 +168,13 @@ export const STARTER_POSTS: PostData[] = [
     category: "Website Development",
     icon: "code",
     date: "2026-10-08",
+    updated: "2026-10-21",
     body: [
       {
         p: "Do you need a website if you have a Facebook page? It's one of the most common questions we hear from business owners. Facebook is a great place to reach customers, and for many businesses it's where most messages come from. But a Facebook page is rented space: you don't control how many people see your posts, and you can't shape how your business appears on Google.",
       },
+      { p: FACT.facebookUsers },
+      { p: FACT.googleShare },
       { h2: "What a website does that Facebook can't" },
       {
         ul: [
@@ -152,6 +198,21 @@ export const STARTER_POSTS: PostData[] = [
           "Your name, address and phone number matching your Google profile.",
         ],
       },
+      {
+        table: {
+          caption: "Facebook page vs website",
+          head: ["", "Facebook page", "Your website"],
+          rows: [
+            ["Found on Google for service searches", "Rarely", "Yes, with service pages"],
+            ["You control reach", "No, depends on the algorithm", "Yes"],
+            ["Works with Google Ads", "Limited", "Yes"],
+            ["Ownership", "Rented from Meta", "Yours"],
+            ["Messaging", "Messenger and WhatsApp", "WhatsApp, call and forms"],
+          ],
+        },
+      },
+      { p: `Thinking about building one? Read our [website development cost guide](/blog/website-development-cost-in-bangladesh) and what makes [an SEO-friendly website](/blog/seo-friendly-website-development).` },
+      { p: `Our [website development service](/services/web-development) builds sites designed for Bangladeshi customers, with WhatsApp and call buttons on every page. Keep your Facebook page active too with [Facebook page management](/blog/facebook-page-management-service).` },
       { h2: "Use both" },
       {
         p: "The best approach is to use Facebook to stay in touch with your community and your website to get found on Google and turn searchers into customers. Each one makes the other work better.",
@@ -171,6 +232,10 @@ export const STARTER_POSTS: PostData[] = [
         a: "No. Use both: Facebook for community and reach, your website for Google visibility and conversions.",
       },
     ],
+    sources: [
+      { label: "NapoleonCat: Social media users in Bangladesh", url: SRC.napoleoncat },
+      { label: "StatCounter: Search engine market share in Bangladesh", url: SRC.statcounterSearch },
+    ],
   },
   {
     slug: "google-ads-for-local-businesses",
@@ -181,6 +246,7 @@ export const STARTER_POSTS: PostData[] = [
     category: "Google Ads",
     icon: "ads",
     date: "2026-09-30",
+    updated: "2026-10-21",
     body: [
       {
         p: "Google Ads puts your business at the top of search results for the searches you choose. For a local business that can mean calls the same day. But the default settings are built to spend money, not to bring you customers.",
@@ -205,6 +271,21 @@ export const STARTER_POSTS: PostData[] = [
           "A landing page with the same offer as the ad and a clear call to action.",
         ],
       },
+      {
+        table: {
+          caption: "Budget leaks and their fixes",
+          head: ["Leak", "Fix", "Google help"],
+          rows: [
+            ["Whole-country targeting", "Target only areas you serve", "[Location targeting](${SRC.adsLocations})"],
+            ["Irrelevant searches", "Add negative keywords weekly", "[Negative keywords](${SRC.adsNegativeKeywords})"],
+            ["Home-page landing", "Service-specific landing pages", "[Quality Score](${SRC.adsQualityScore})"],
+            ["No tracking", "Track calls, WhatsApp and forms", "Conversion tracking"],
+            ["24/7 ads", "Ad schedule for business hours", "Ad scheduling"],
+          ],
+        },
+      },
+      { p: `Run a full check with our [Google Ads audit checklist](/blog/google-ads-audit-checklist), and see [Google Ads lead generation](/blog/google-ads-lead-generation) for a setup that works.` },
+      { p: `Our [Google Ads service](/services/google-ads) sets this up for you, and our guide on [how much Google Ads costs in Bangladesh](/blog/google-ads-cost-in-bangladesh) helps you plan a budget.` },
       { h2: "Measure what matters" },
       {
         p: "Clicks and impressions don't pay the bills. Judge your ads on cost per lead and, where you can, cost per customer. Once you know those numbers, you can confidently put more budget behind what works.",
@@ -224,6 +305,11 @@ export const STARTER_POSTS: PostData[] = [
         a: "Use call assets with call reporting, and track clicks on phone and WhatsApp buttons on your website as conversions.",
       },
     ],
+    sources: [
+      { label: "Google Ads Help: Location targeting", url: SRC.adsLocations },
+      { label: "Google Ads Help: About negative keywords", url: SRC.adsNegativeKeywords },
+      { label: "Google Ads Help: About Quality Score", url: SRC.adsQualityScore },
+    ],
   },
   {
     slug: "facebook-vs-instagram-for-local-business",
@@ -234,10 +320,12 @@ export const STARTER_POSTS: PostData[] = [
     category: "Social Media Marketing",
     icon: "social",
     date: "2026-09-22",
+    updated: "2026-10-21",
     body: [
       {
         p: "Facebook vs Instagram for business: which one deserves your time? Social media can feel like a full-time job. The good news is that most local businesses only need to do one or two platforms well.",
       },
+      { p: FACT.facebookUsers },
       { h2: "Facebook: reach, community and messages" },
       {
         p: "Facebook is still where many customers in Bangladesh look up businesses, read comments and send messages. It suits services that people research before buying, and businesses that rely on enquiries through Messenger.",
@@ -256,6 +344,20 @@ export const STARTER_POSTS: PostData[] = [
           "Clear offers with an easy next step: call, WhatsApp or book.",
         ],
       },
+      {
+        table: {
+          caption: "Facebook vs Instagram at a glance",
+          head: ["", "Facebook", "Instagram"],
+          rows: [
+            ["Audience size in Bangladesh", "Very large", "Smaller, younger, urban"],
+            ["Best content", "Posts, videos, groups, events", "Reels, carousels, stories"],
+            ["Best for", "Most local services, community, messages", "Visual brands: food, fashion, beauty, interiors"],
+            ["Messaging", "Messenger and WhatsApp", "DMs and WhatsApp"],
+          ],
+        },
+      },
+      { p: `Go deeper with our [Instagram marketing plan](/blog/instagram-marketing-for-business-bangladesh) or [Facebook page management](/blog/facebook-page-management-service).` },
+      { p: `Want to turn posts into enquiries? Try [click to WhatsApp ads](/blog/click-to-whatsapp-ads), or let our [social media marketing service](/services/social-media) handle it.` },
       { h2: "Consistency beats volume" },
       {
         p: "Three good posts a week, every week, will do more than a burst of daily posting that stops after a month. Plan a simple monthly calendar, and add a small ad budget behind your best posts to reach people in your area.",
@@ -274,6 +376,9 @@ export const STARTER_POSTS: PostData[] = [
         q: "How often should I post?",
         a: "Three good posts a week on your main platform is a solid, sustainable starting point.",
       },
+    ],
+    sources: [
+      { label: "NapoleonCat: Social media users in Bangladesh", url: SRC.napoleoncat },
     ],
   },
 ];
