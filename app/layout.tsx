@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -12,7 +14,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: `${SITE.name} | Local SEO, Websites, Google Ads & Social Media Marketing`,
+  title: {
+    default: `${SITE.name} | Local SEO, Websites, Google Ads & Social Media Marketing`,
+    template: `%s | ${SITE.name}`,
+  },
   description:
     "Growbard helps local businesses get more calls and customers with Local SEO, website development, Google Ads and social media marketing.",
   openGraph: {
@@ -31,7 +36,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

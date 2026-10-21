@@ -1,21 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Icon from "@/components/Icon";
-import { SITE } from "@/lib/site";
-
-const LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why" },
-  { label: "Packages", href: "#packages" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
-];
+import { NAV, SITE } from "@/lib/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -28,38 +23,41 @@ export default function Header() {
     <>
       <header className={`header${scrolled ? " header--scrolled" : ""}`}>
         <div className="container header__inner">
-          <a href="#top" className="brand" aria-label={`${SITE.name} home`}>
+          <Link href="/" className="brand" aria-label={`${SITE.name} home`}>
             <Image src="/logo.png" alt="" width={42} height={42} priority className="brand__logo" />
             <span className="brand__text">
               <span className="brand__name">{SITE.name}</span>
               <span className="brand__sub">Digital Marketing Agency</span>
             </span>
-          </a>
+          </Link>
 
           <nav className={`nav${open ? " nav--open" : ""}`} aria-label="Main">
-            <a href="#top" className="nav__active" onClick={() => setOpen(false)}>
-              Home
-            </a>
-            {LINKS.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+            {NAV.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={pathname === item.href ? "nav__active" : undefined}
+                aria-current={pathname === item.href ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <a href={SITE.phoneHref} className="btn btn--white nav__phone nav__mobile-only">
               <Icon name="phone" size={16} /> {SITE.phone}
             </a>
-            <a href="#contact" className="btn btn--primary nav__mobile-only" onClick={() => setOpen(false)}>
+            <Link href="/contact" className="btn btn--primary nav__mobile-only" onClick={() => setOpen(false)}>
               Book now <Icon name="arrow" size={16} />
-            </a>
+            </Link>
           </nav>
 
           <div className="header__actions">
             <a href={SITE.phoneHref} className="btn btn--white nav__phone">
               <Icon name="phone" size={16} /> {SITE.phone}
             </a>
-            <a href="#contact" className="btn btn--primary">
+            <Link href="/contact" className="btn btn--primary">
               Book now <Icon name="arrow" size={16} />
-            </a>
+            </Link>
           </div>
 
           <button

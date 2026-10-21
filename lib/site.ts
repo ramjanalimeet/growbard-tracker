@@ -23,12 +23,12 @@ export const SITE = {
 };
 
 export const NAV = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why" },
-  { label: "Process", href: "#process" },
-  { label: "Packages", href: "#packages" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export type Service = {
@@ -36,6 +36,7 @@ export type Service = {
   title: string;
   icon: "pin" | "code" | "ads" | "social";
   blurb: string;
+  description: string;
   points: string[];
 };
 
@@ -46,6 +47,8 @@ export const SERVICES: Service[] = [
     icon: "pin",
     blurb:
       "Show up in the Google Map Pack and local search when nearby customers are ready to buy.",
+    description:
+      "Most local customers pick from the top three results in Google Maps. We optimize your Google Business Profile, build consistent citations, grow your reviews and create location pages so you show up when people nearby search for what you do.",
     points: [
       "Google Business Profile optimization",
       "Citation building & NAP cleanup",
@@ -59,6 +62,8 @@ export const SERVICES: Service[] = [
     icon: "code",
     blurb:
       "Fast, mobile-first websites built to rank and to turn visitors into calls, bookings and sales.",
+    description:
+      "Your website is often the first impression a customer gets. We design and build fast, mobile-first sites with clear calls to action, then keep them updated, secure and backed up so you never have to worry about the technical side.",
     points: [
       "Custom design that matches your brand",
       "Lightning-fast, mobile-first build",
@@ -72,6 +77,8 @@ export const SERVICES: Service[] = [
     icon: "ads",
     blurb:
       "Paid search campaigns that put you at the top of Google and bring in leads from day one.",
+    description:
+      "Google Ads puts you at the top of search results the day your campaign goes live. We research the keywords your customers use, write ads that get clicked, cut wasted spend and track every call and form so you know exactly what you get back.",
     points: [
       "Search, Local Services & Performance Max",
       "Keyword research & negative keyword control",
@@ -85,6 +92,8 @@ export const SERVICES: Service[] = [
     icon: "social",
     blurb:
       "Content and paid social that builds trust in your community and keeps your brand top of mind.",
+    description:
+      "Your customers spend hours every day on Facebook and Instagram. We plan and create content that shows off your work, run targeted ads to people in your area and engage with your community so your brand stays top of mind.",
     points: [
       "Facebook & Instagram management",
       "Scroll-stopping posts, reels & graphics",
@@ -255,5 +264,34 @@ export const FAQS = [
   {
     q: "How will I know what's working?",
     a: "You get a monthly report covering rankings, traffic, calls, leads and ad spend, plus a monthly check-in call with your account manager.",
+  },
+];
+
+export const PRICING_COMPARE: { feature: string; plans: [boolean, boolean, boolean] }[] = [
+  { feature: "Local SEO", plans: [true, true, true] },
+  { feature: "Google Business Profile optimization", plans: [true, true, true] },
+  { feature: "Website development", plans: [false, true, true] },
+  { feature: "Website maintenance", plans: [false, true, true] },
+  { feature: "Google Ads management", plans: [false, true, true] },
+  { feature: "Social media marketing", plans: [false, false, true] },
+  { feature: "Monthly performance report", plans: [true, true, true] },
+];
+
+export const PRICING_FAQS = [
+  {
+    q: "Are the prices monthly?",
+    a: "Yes. All plans are billed monthly in Bangladeshi Taka.",
+  },
+  {
+    q: "Is Google Ads budget included in the price?",
+    a: "No. Our fee covers setting up and managing your campaigns. Your ad budget is paid directly to Google, so you stay in full control of how much you spend.",
+  },
+  {
+    q: "Can I upgrade my plan later?",
+    a: "Yes. Many clients start with Starter and move to Growth or Dominate once they see results. Just let us know and we'll switch you over.",
+  },
+  {
+    q: "Do you offer custom plans?",
+    a: "Yes. If you need a single service or a different mix, chat with us on WhatsApp or call us and we'll put together a plan for your business.",
   },
 ];
