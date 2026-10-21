@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 const TRUST = [
   { icon: "sparkle", label: "Data-driven strategy" },
-  { icon: "star", label: "4.9 star rated" },
+  { icon: "star", label: "5.0 rated on Google" },
   { icon: "pin", label: "Local market experts" },
 ] as const;
 

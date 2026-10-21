@@ -10,7 +10,7 @@ import {
   StatsSection,
   WhySection,
 } from "@/components/Sections";
-import { SERVICES, SITE } from "@/lib/site";
+import { GOOGLE, SERVICES, SITE } from "@/lib/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -21,6 +21,9 @@ const jsonLd = {
   email: SITE.email,
   telephone: SITE.phone,
   description: SITE.tagline,
+  address: { "@type": "PostalAddress", addressLocality: "Dhaka", addressCountry: "BD" },
+  areaServed: SITE.areaServed,
+  hasMap: GOOGLE.profileUrl,
   makesOffer: SERVICES.map((s) => ({
     "@type": "Offer",
     itemOffered: { "@type": "Service", name: s.title, description: s.blurb },

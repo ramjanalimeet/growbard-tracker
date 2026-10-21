@@ -5,15 +5,17 @@ export const SITE = {
   tagline: "Digital marketing that grows local businesses",
   url: "https://growbard.com",
   email: "raakash.meet@gmail.com",
-  phone: "+880 1839-295114",
+  // Same format as the Google Business Profile, to keep name/address/phone consistent.
+  phone: "01839-295114",
   phoneHref: "tel:+8801839295114",
-  whatsapp: "+880 1839-295114",
+  whatsapp: "01839-295114",
   // Country code + number, digits only, as WhatsApp's wa.me links need it.
   whatsappNumber: "8801839295114",
   whatsappHref:
     "https://wa.me/8801839295114?text=" +
     encodeURIComponent("Hi Growbard, I'd like to know more about your services."),
-  hours: "Mon – Fri, 9am – 6pm",
+  hours: "Opens daily at 9am",
+  areaServed: "Dhaka and nearby areas",
   // YouTube video ID for the hero video card (the part after "watch?v=").
   // Leave empty to show the animated dashboard preview instead.
   heroVideoId: "",
@@ -108,7 +110,7 @@ export const SERVICES: Service[] = [
 export const STATS = [
   { value: "150+", label: "Businesses grown" },
   { value: "3.2x", label: "Average lead increase" },
-  { value: "4.9★", label: "Client rating" },
+  { value: "5.0★", label: "Google rating" },
   { value: "24h", label: "Response time" },
 ];
 
@@ -215,32 +217,38 @@ export const PACKAGES: Package[] = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: "Mark R.",
-    role: "Owner, Roofing Company",
-    quote:
-      "Growbard got us into the Map Pack in under three months. Our phone hasn't stopped ringing since.",
-  },
-  {
-    name: "Sarah L.",
-    role: "Founder, Dental Clinic",
-    quote:
-      "The new website looks amazing and actually converts. Online bookings doubled in the first month.",
-  },
-  {
-    name: "James T.",
-    role: "Manager, HVAC Services",
-    quote:
-      "Our Google Ads were burning money before. Now every dollar is tracked and our cost per lead dropped by half.",
-  },
-  {
-    name: "Priya K.",
-    role: "Owner, Beauty Salon",
-    quote:
-      "Our Instagram finally looks professional and brings in new clients every week. Great team to work with.",
-  },
-];
+// Google Business Profile ("Growbard - Marketing Agency").
+// rating/reviewCount are the fallback when the live Google fetch isn't set up
+// (see lib/google.ts); update them when new reviews come in.
+export const GOOGLE = {
+  businessName: "Growbard - Marketing Agency",
+  rating: 5.0,
+  reviewCount: 2,
+  // Paste the profile's share link here (Google Maps > Share > Copy link).
+  profileUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
+  // Paste the "Ask for reviews" link from the profile here.
+  writeReviewUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
+  mapEmbedUrl:
+    "https://www.google.com/maps?output=embed&q=" +
+    encodeURIComponent("Growbard - Marketing Agency, Dhaka"),
+};
+
+export type Review = {
+  author: string;
+  rating: number;
+  text: string;
+  when?: string;
+  photo?: string;
+  url?: string;
+};
+
+// Reviews copied from the Google Business Profile. Used when the live Google
+// fetch isn't configured. Only add real reviews here, word for word.
+export const GOOGLE_REVIEWS: Review[] = [];
 
 export const FAQS = [
   {

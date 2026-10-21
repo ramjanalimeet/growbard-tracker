@@ -1,15 +1,17 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import { GoogleSummary, ReviewCard } from "@/components/GoogleReviews";
 import Icon from "@/components/Icon";
+import { getGoogleData } from "@/lib/google";
 import {
   FAQS,
+  GOOGLE,
   PACKAGES,
   PRICING_COMPARE,
   PROCESS,
   SERVICES,
   SITE,
   STATS,
-  TESTIMONIALS,
   WHY,
 } from "@/lib/site";
 
@@ -293,29 +295,56 @@ export function PricingCompare() {
   );
 }
 
-export function ReviewsSection({ more = false }: { more?: boolean }) {
+export async function ReviewsSection({ more = false }: { more?: boolean }) {
+  const google = await getGoogleData();
   return (
     <section className="section">
       <div className="container">
-        <SectionHead eyebrow="Client Reviews" title="Local businesses love working with us" />
-        <div className="reviews">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="card review">
-              <span className="stars" aria-label="5 out of 5 stars">
-                ★★★★★
-              </span>
-              <blockquote>“{t.quote}”</blockquote>
-              <figcaption>
-                <span className="review__avatar">{t.name[0]}</span>
-                <span>
-                  <strong>{t.name}</strong>
-                  <small>{t.role}</small>
-                </span>
-              </figcaption>
-            </figure>
-          ))}
+        <SectionHead
+          eyebrow="Google Reviews"
+          title="Rated 5.0 by our clients on Google"
+          lead="Straight from our Google Business Profile."
+        />
+        <div className={`g-reviews${google.reviews.length ? "" : " g-reviews--solo"}`}>
+          <GoogleSummary data={google} />
+          {google.reviews.length > 0 && (
+            <div className="g-reviews__list">
+              {google.reviews.map((r) => (
+                <ReviewCard key={r.author + r.text} review={r} />
+              ))}
+            </div>
+          )}
         </div>
         {more && <MoreLink href="/reviews">Read all reviews</MoreLink>}
+      </div>
+    </section>
+  );
+}
+
+export function MapSection() {
+  return (
+    <section className="section">
+      <div className="container map">
+        <div className="map__info">
+          <p className="eyebrow">Find Us</p>
+          <h2>Serving {SITE.areaServed}</h2>
+          <p className="lead">
+            Growbard is based in Dhaka and works with businesses across the city and beyond, in
+            person or online.
+          </p>
+          <a href={GOOGLE.profileUrl} className="btn btn--white" target="_blank" rel="noopener noreferrer">
+            <Icon name="pin" size={18} /> Open in Google Maps
+          </a>
+        </div>
+        <div className="map__frame">
+          <iframe
+            src={GOOGLE.mapEmbedUrl}
+            title={`${GOOGLE.businessName} on Google Maps`}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
       </div>
     </section>
   );
@@ -411,6 +440,12 @@ export function ContactSection() {
                 <Icon name="clock" size={20} />
               </span>
               {SITE.hours}
+            </li>
+            <li>
+              <span className="contact__icon">
+                <Icon name="pin" size={20} />
+              </span>
+              {SITE.areaServed}
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactSection, FaqSection, PageHero } from "@/components/Sections";
+import { ContactSection, FaqSection, MapSection, PageHero } from "@/components/Sections";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,6 +17,7 @@ export default function ContactPage() {
         lead="Call us, chat on WhatsApp or send the form below. We reply within one business day."
       />
       <ContactSection />
+      <MapSection />
       <FaqSection />
     </>
   );

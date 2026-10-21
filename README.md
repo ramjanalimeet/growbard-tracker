@@ -20,3 +20,17 @@ The social media links there are **placeholders**, so replace them before launch
 The contact form opens WhatsApp with the visitor's details typed out as a
 message to `SITE.whatsappNumber`; the visitor taps Send and it arrives in
 Growbard's WhatsApp.
+
+## Google Business Profile
+
+The rating badge, reviews section and map use the **Growbard - Marketing Agency**
+Google Business Profile (settings in `GOOGLE` in `lib/site.ts`).
+
+- **Live reviews (recommended):** in Vercel, add the environment variables
+  `GOOGLE_PLACES_API_KEY` (Google Cloud key with *Places API (New)* enabled) and
+  `GOOGLE_PLACE_ID` (find it with Google's Place ID Finder). The site then pulls
+  the rating, review count and latest reviews from Google once a day.
+- **Without an API key:** the site shows `GOOGLE.rating` / `GOOGLE.reviewCount`
+  and any reviews pasted into `GOOGLE_REVIEWS`.
+- Paste the profile's share link into `GOOGLE.profileUrl` and its "Ask for
+  reviews" link into `GOOGLE.writeReviewUrl`.

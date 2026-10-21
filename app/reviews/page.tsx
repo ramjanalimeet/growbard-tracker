@@ -12,8 +12,8 @@ export default function ReviewsPage() {
     <>
       <PageHero
         eyebrow="Reviews"
-        title="What our clients say"
-        lead="Real results for local businesses, in their own words."
+        title="Our Google reviews"
+        lead="See what clients say about Growbard on Google, and leave a review of your own."
       />
       <ReviewsSection />
       <StatsSection />
