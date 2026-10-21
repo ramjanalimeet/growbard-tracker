@@ -2644,3 +2644,129 @@ a.chip-link--all:hover {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Blog: topics, rich article blocks, table of contents */
+.blog-topics {
+  margin-bottom: 32px;
+}
+
+.blog-topics small {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-size: 0.75rem;
+}
+
+.blog-topic {
+  margin-top: 64px;
+  scroll-margin-top: 100px;
+}
+
+.blog-topic h2 {
+  font-size: 1.6rem;
+  margin-bottom: 22px;
+}
+
+.prose > p:first-child {
+  font-size: 1.2rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.prose h2 {
+  scroll-margin-top: 100px;
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin: 1.4em 0 0.4em;
+}
+
+.prose a:not(.btn) {
+  color: var(--brand-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.4em;
+  display: grid;
+  gap: 12px;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 44px;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.post-end-cta {
+  margin-top: 48px;
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--tint);
+  border: 1px solid #fbd3bb;
+}
+
+.post-end-cta h2 {
+  margin-top: 0;
+}
+
+.post-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.post-toc strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post-toc ol {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+
+.post-toc a:hover {
+  color: var(--brand);
+}
+
+@media (max-width: 960px) {
+  .post-toc {
+    display: none;
+  }
+}
