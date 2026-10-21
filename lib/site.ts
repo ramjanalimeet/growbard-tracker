@@ -4,10 +4,12 @@ export const SITE = {
   name: "Growbard",
   tagline: "Digital marketing that grows local businesses",
   url: "https://growbard.com",
-  email: "hello@growbard.com",
+  email: "raakash.meet@gmail.com",
   phone: "+880 1839-295114",
   phoneHref: "tel:+8801839295114",
   whatsapp: "+880 1839-295114",
+  // Country code + number, digits only, as WhatsApp's wa.me links need it.
+  whatsappNumber: "8801839295114",
   whatsappHref:
     "https://wa.me/8801839295114?text=" +
     encodeURIComponent("Hi Growbard, I'd like to know more about your services."),

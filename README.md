@@ -15,7 +15,8 @@ npm run build
 ## Editing content
 
 All copy (services, packages, reviews, FAQ, contact details) lives in `lib/site.ts`.
-The phone number, email and social links there are **placeholders**, so replace them before launch.
+The social media links there are **placeholders**, so replace them before launch.
 
-The contact form opens the visitor's email app addressed to `SITE.email`. To collect
-submissions directly, connect it to a form service such as Formspree or Resend.
+The contact form opens WhatsApp with the visitor's details typed out as a
+message to `SITE.whatsappNumber`; the visitor taps Send and it arrives in
+Growbard's WhatsApp.

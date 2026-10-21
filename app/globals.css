@@ -1440,10 +1440,14 @@ img {
 }
 
 .form__or {
-  margin: -4px 0;
+  margin: -4px 0 0;
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.form__or a {
+  color: var(--brand);
 }
 
 .form__note {

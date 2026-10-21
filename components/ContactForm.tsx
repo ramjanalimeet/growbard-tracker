@@ -4,25 +4,32 @@ import { useState } from "react";
 import Icon from "@/components/Icon";
 import { SERVICES, SITE } from "@/lib/site";
 
-// No backend yet: the form opens the visitor's email app with the details
-// filled in. Swap this for a form service (Formspree, Resend, etc.) later.
+// Sends the enquiry to Growbard's WhatsApp: the form opens WhatsApp with the
+// details already typed out, and the visitor taps Send.
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = `New enquiry from ${data.get("name")} — ${data.get("service")}`;
-    const body = [
-      `Name: ${data.get("name")}`,
-      `Business: ${data.get("business")}`,
-      `Email: ${data.get("email")}`,
-      `Phone: ${data.get("phone")}`,
-      `Service: ${data.get("service")}`,
+    const field = (name: string) => String(data.get(name) ?? "").trim() || "-";
+    const text = [
+      "*New enquiry from the Growbard website*",
       "",
-      `${data.get("message")}`,
+      `*Name:* ${field("name")}`,
+      `*Business:* ${field("business")}`,
+      `*Email:* ${field("email")}`,
+      `*Phone:* ${field("phone")}`,
+      `*Service:* ${field("service")}`,
+      "",
+      `*Message:* ${field("message")}`,
     ].join("\n");
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const url = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(text)}`;
+    // A new tab keeps the site open on desktop; fall back if popups are blocked.
+    // ("noopener" would make window.open always return null, so clear opener by hand.)
+    const tab = window.open(url, "_blank");
+    if (tab) tab.opener = null;
+    else window.location.href = url;
     setSent(true);
   }
 
@@ -41,11 +48,11 @@ export default function ContactForm() {
       <div className="form__row">
         <label>
           Email
-          <input name="email" type="email" required autoComplete="email" />
+          <input name="email" type="email" autoComplete="email" />
         </label>
         <label>
-          Phone
-          <input name="phone" type="tel" autoComplete="tel" />
+          Phone / WhatsApp
+          <input name="phone" type="tel" required autoComplete="tel" />
         </label>
       </div>
       <label>
@@ -61,22 +68,21 @@ export default function ContactForm() {
         Tell us about your goals
         <textarea name="message" rows={4} />
       </label>
-      <button type="submit" className="btn btn--primary btn--block">
-        Get My Free Growth Plan
+      <button type="submit" className="btn btn--whatsapp btn--block">
+        <Icon name="whatsapp" size={20} /> Send via WhatsApp
       </button>
-      <p className="form__or">or</p>
-      <a
-        href={SITE.whatsappHref}
-        className="btn btn--whatsapp btn--block"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="whatsapp" size={20} /> Chat on WhatsApp
-      </a>
+      <p className="form__or">
+        Your details open in WhatsApp, ready to send to us. Prefer email?{" "}
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </p>
       {sent && (
-        <p className="form__note">
-          Thanks! Your email app should open now. If it didn&apos;t, email us at{" "}
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        <p className="form__note" role="status">
+          Thanks! WhatsApp should open now. Tap <strong>Send</strong> to deliver your message.
+          If it didn&apos;t open, message us on WhatsApp at{" "}
+          <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
+            {SITE.whatsapp}
+          </a>
+          .
         </p>
       )}
     </form>
