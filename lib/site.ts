@@ -8,6 +8,9 @@ export const SITE = {
   phone: "+1 (555) 123-4567",
   phoneHref: "tel:+15551234567",
   hours: "Mon – Fri, 9am – 6pm",
+  // YouTube video ID for the hero video card (the part after "watch?v=").
+  // Leave empty to show the animated dashboard preview instead.
+  heroVideoId: "",
   socials: [
     { label: "Facebook", href: "https://facebook.com/" },
     { label: "Instagram", href: "https://instagram.com/" },

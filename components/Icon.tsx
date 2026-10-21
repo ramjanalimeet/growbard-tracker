@@ -1,4 +1,18 @@
-type Name = "pin" | "code" | "ads" | "social" | "check" | "star" | "phone" | "mail" | "clock" | "arrow";
+type Name =
+  | "pin"
+  | "code"
+  | "ads"
+  | "social"
+  | "check"
+  | "star"
+  | "phone"
+  | "mail"
+  | "clock"
+  | "arrow"
+  | "sparkle"
+  | "shield"
+  | "rocket"
+  | "play";
 
 const PATHS: Record<Name, React.ReactNode> = {
   pin: (
@@ -41,6 +55,21 @@ const PATHS: Record<Name, React.ReactNode> = {
     </>
   ),
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
+  sparkle: <path d="M12 3v4M12 17v4M3 12h4M17 12h4M12 8l1.5 2.5L16 12l-2.5 1.5L12 16l-1.5-2.5L8 12l2.5-1.5L12 8Z" />,
+  shield: (
+    <>
+      <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </>
+  ),
+  rocket: (
+    <>
+      <path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2" />
+      <path d="M9 15 6 12l2-4h4l6-5c1 3 0 7-3 10l-4 4-2-2Z" />
+      <circle cx="14.5" cy="9.5" r="1.5" />
+    </>
+  ),
+  play: <path d="M8 5v14l11-7L8 5Z" fill="currentColor" />,
 };
 
 export default function Icon({ name, size = 24 }: { name: Name; size?: number }) {

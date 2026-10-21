@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import Icon from "@/components/Icon";
 import {
   FAQS,
@@ -39,59 +40,7 @@ export default function Home() {
       <Header />
 
       <main id="top">
-        {/* Hero */}
-        <section className="hero">
-          <div className="container hero__inner">
-            <div className="hero__copy">
-              <p className="eyebrow">Local SEO · Websites · Google Ads · Social Media</p>
-              <h1>
-                Grow your local business with <span className="accent">marketing that works</span>
-              </h1>
-              <p className="lead">
-                Growbard helps local businesses get found on Google, win more calls and turn
-                clicks into loyal customers, with one team handling your SEO, website, ads and
-                social media.
-              </p>
-              <div className="hero__actions">
-                <a href="#contact" className="btn btn--primary btn--lg">
-                  Get a Free Quote <Icon name="arrow" size={18} />
-                </a>
-                <a href="#services" className="btn btn--ghost btn--lg">
-                  Explore Services
-                </a>
-              </div>
-              <ul className="hero__trust">
-                <li>
-                  <Icon name="check" size={18} /> No long-term contracts
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Free strategy call
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Results in 30–60 days
-                </li>
-              </ul>
-            </div>
-
-            <div className="hero__visual" aria-hidden="true">
-              <div className="hero__badge">
-                <Image src="/logo.png" alt="" width={220} height={220} priority />
-              </div>
-              <div className="float-card float-card--a">
-                <span className="float-card__value">+212%</span>
-                <span className="float-card__label">Website leads</span>
-              </div>
-              <div className="float-card float-card--b">
-                <span className="float-card__value">#1</span>
-                <span className="float-card__label">Google Map Pack</span>
-              </div>
-              <div className="float-card float-card--c">
-                <span className="stars">★★★★★</span>
-                <span className="float-card__label">4.9 client rating</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Stats */}
         <section className="stats">
