@@ -21,8 +21,8 @@ export default async function OgImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "linear-gradient(135deg, #fff7f1 0%, #fde3d2 100%)",
-          color: "#16181d",
+          background: "linear-gradient(135deg, #ffffff 0%, #f4fbee 45%, #dcf3c9 100%)",
+          color: "#10190c",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
@@ -30,7 +30,7 @@ export default async function OgImage() {
           <img src={src} width={110} height={110} style={{ borderRadius: 24 }} alt="" />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 64, fontWeight: 800 }}>{SITE.name}</div>
-            <div style={{ fontSize: 28, color: "#f36a22", fontWeight: 700 }}>YOUR GROWTH PARTNER</div>
+            <div style={{ fontSize: 28, color: "#2f7d0a", fontWeight: 700 }}>YOUR GROWTH PARTNER</div>
           </div>
         </div>
         <div style={{ fontSize: 46, fontWeight: 700, marginTop: 56, lineHeight: 1.2 }}>
