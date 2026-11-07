@@ -18,9 +18,9 @@ const FEATURES = [
 ] as const;
 
 const AVATARS = [
-  { initial: "M", color: "#f36a22" },
+  { initial: "M", color: "#2a700a" },
   { initial: "S", color: "#2563eb" },
-  { initial: "J", color: "#16a34a" },
+  { initial: "J", color: "#0f766e" },
   { initial: "P", color: "#9333ea" },
 ];
 
@@ -177,8 +177,8 @@ function DashboardPreview() {
       <svg className="dash__chart" viewBox="0 0 300 90" preserveAspectRatio="none">
         <defs>
           <linearGradient id="dashFill" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" stopColor="#f36a22" stopOpacity="0.35" />
-            <stop offset="1" stopColor="#f36a22" stopOpacity="0" />
+            <stop offset="0" stopColor="#53bc14" stopOpacity="0.35" />
+            <stop offset="1" stopColor="#53bc14" stopOpacity="0" />
           </linearGradient>
         </defs>
         <path
@@ -188,7 +188,7 @@ function DashboardPreview() {
         <path
           d="M0 80 L30 74 L60 76 L90 62 L120 64 L150 48 L180 50 L210 34 L240 30 L270 16 L300 8"
           fill="none"
-          stroke="#f36a22"
+          stroke="#8ee04f"
           strokeWidth="3"
           strokeLinejoin="round"
         />
