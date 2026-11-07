@@ -18,9 +18,9 @@ const FEATURES = [
 ] as const;
 
 const AVATARS = [
-  { initial: "M", color: "#53bc14" },
+  { initial: "M", color: "#2a700a" },
   { initial: "S", color: "#2563eb" },
-  { initial: "J", color: "#16a34a" },
+  { initial: "J", color: "#0f766e" },
   { initial: "P", color: "#9333ea" },
 ];
 

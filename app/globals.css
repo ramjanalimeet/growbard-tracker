@@ -1,15 +1,18 @@
 :root {
   --brand: #53bc14;
-  --brand-text: #2f7d0a;
+  --brand-text: #2a700a;
   --brand-light: #8ee04f;
-  --brand-gradient: linear-gradient(135deg, #6fd12e 0%, #53bc14 55%, #3f9a0c 100%);
+  /* Surfaces that carry white text: deep enough for AA contrast (4.6:1 or better) */
+  --brand-gradient: linear-gradient(135deg, #33850a 0%, #2a700a 100%);
+  /* Decorative accents only (no text on top): the bright logo green */
+  --brand-gradient-bright: linear-gradient(135deg, #6fd12e 0%, #53bc14 55%, #3f9a0c 100%);
   --light-gradient: linear-gradient(160deg, #ffffff 0%, #f4fbee 45%, #e3f6d3 100%);
-  --brand-dark: #3f9a0c;
+  --brand-dark: #2a700a;
   --brand-soft: #eef9e6;
-  --whatsapp: #25d366;
+  --whatsapp: #0c7d42;
   --ink: #16181d;
   --ink-2: #4a4f5a;
-  --muted: #6b7280;
+  --muted: #5f6672;
   --line: #e4ebe0;
   --bg: #ffffff;
   --tint: #f6fbf2;
@@ -152,7 +155,7 @@ img {
 }
 
 .btn--primary:hover {
-  background: linear-gradient(135deg, #53bc14 0%, #3f9a0c 100%);
+  background: linear-gradient(135deg, #2a700a 0%, #1f5c06 100%);
 }
 
 .btn--ghost {
@@ -277,7 +280,7 @@ img {
   bottom: -4px;
   height: 2px;
   border-radius: 2px;
-  background: var(--brand-gradient);
+  background: var(--brand-gradient-bright);
 }
 
 .nav__mobile-only {
@@ -386,17 +389,17 @@ img {
 
 .fab--whatsapp {
   background: var(--whatsapp);
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 10px 24px rgba(12, 125, 66, 0.45);
 }
 
 .btn--whatsapp {
   background: var(--whatsapp);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 8px 20px rgba(12, 125, 66, 0.3);
 }
 
 .btn--whatsapp:hover {
-  background: #1ebe5a;
+  background: #0a6e39;
 }
 
 /* Sticky Call / WhatsApp bar, phones only */
@@ -694,7 +697,7 @@ img {
   display: grid;
   place-items: center;
   border: 4px solid rgba(255, 255, 255, 0.9);
-  background: var(--brand-gradient);
+  background: var(--brand-gradient-bright);
   color: #fff;
   cursor: pointer;
   padding: 0 0 0 4px;
@@ -737,7 +740,7 @@ img {
   position: absolute;
   inset: 0 62% 0 0;
   border-radius: 4px;
-  background: var(--brand-gradient);
+  background: var(--brand-gradient-bright);
 }
 
 .video-card__track span::after {
@@ -783,7 +786,7 @@ img {
 }
 
 .dash__dots i:first-child {
-  background: var(--brand-gradient);
+  background: var(--brand-gradient-bright);
 }
 
 .dash__kpis {
@@ -1280,7 +1283,7 @@ img {
 
 /* CTA band */
 .cta-band {
-  background: linear-gradient(120deg, #3f9a0c 0%, #53bc14 50%, #7bd23a 100%);
+  background: linear-gradient(120deg, #1f5c06 0%, #2a700a 55%, #33850a 100%);
   color: #fff;
   padding: 64px 0;
 }
@@ -1605,7 +1608,7 @@ img {
   width: 100%;
   justify-self: center;
   border-radius: 40px;
-  background: linear-gradient(150deg, #3f9a0c, #53bc14 50%, #8ee04f);
+  background: var(--brand-gradient-bright);
   display: grid;
   place-items: center;
   color: #fff;
